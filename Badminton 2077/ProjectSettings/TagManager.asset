@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - 'Shuttle '
+=======
+  - Obstacle
+  - Obstacle2
+>>>>>>> 3cdb18354ac0a30641bf8d710ed6d268fecf0d20
   layers:
   - Default
   - TransparentFX

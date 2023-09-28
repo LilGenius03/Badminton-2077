@@ -57,4 +57,15 @@ public class Player1Movement : MonoBehaviour
         }
 
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Obstacle")
+        {
+            y = -gridSize;
+        }
+        if (collision.collider.tag == "Obstacle2")
+        {
+            y = gridSize;
+        }
+    }
 }
