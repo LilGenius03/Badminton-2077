@@ -409,10 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab269176b35a35140a034136582d6fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBTWHit: 0
-  startTimeBTWHit: 0
-  HitRange: 0
-  hitPos: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,7 +1581,6 @@ GameObject:
   - component: {fileID: 1856668730}
   - component: {fileID: 1856668727}
   - component: {fileID: 1856668726}
-  - component: {fileID: 1856668731}
   m_Layer: 0
   m_Name: 'Player 1 '
   m_TagString: Untagged
@@ -1750,22 +1745,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1856668731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856668723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab269176b35a35140a034136582d6fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBTWHit: 0
-  startTimeBTWHit: 0
-  HitRange: 0
-  hitPos: {fileID: 0}
 --- !u!1 &1902984335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1899,8 @@ GameObject:
   - component: {fileID: 1941945924}
   - component: {fileID: 1941945923}
   - component: {fileID: 1941945922}
+  - component: {fileID: 1941945926}
+  - component: {fileID: 1941945925}
   m_Layer: 0
   m_Name: Shuttle
   m_TagString: Untagged
@@ -2039,6 +2020,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1941945925
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941945921}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1941945926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941945921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d42e4cc09eb6b4c959fadd0be0a28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rb: {fileID: 1941945925}
+  rotationSpeed: 1
+  rotationTime: 2
 --- !u!1 &1978923926
 GameObject:
   m_ObjectHideFlags: 0
