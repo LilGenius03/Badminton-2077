@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HittingScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float timeBTWHit;
+    public float startTimeBTWHit;
 
-    // Update is called once per frame
-    void Update()
+    public float HitRange;
+    public Transform hitPos;
+
+    private void Update()
     {
         
     }

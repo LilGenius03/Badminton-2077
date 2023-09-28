@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 385149661}
   - component: {fileID: 385149660}
   - component: {fileID: 385149662}
+  - component: {fileID: 385149663}
   m_Layer: 0
   m_Name: Top Hand
   m_TagString: Untagged
@@ -396,6 +397,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &385149663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385149658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab269176b35a35140a034136582d6fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  THP1Swing: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,9 +1513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: 1
+  playerSprite: {fileID: 1856668723}
   Racket1: {fileID: 115196516}
   Racket2: {fileID: 1022234099}
-  playerSprite: {fileID: 1856668723}
 --- !u!50 &1856668727
 Rigidbody2D:
   serializedVersion: 4
