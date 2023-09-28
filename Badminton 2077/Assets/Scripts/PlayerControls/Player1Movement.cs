@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Player1Movement : MonoBehaviour
 {
-    public float gridSize = 1f;
+    public  float gridSize = 1f;
     private float x, y;
+    public GameObject Racket1;
+    public GameObject Racket2;
+    private bool Racket1On = true;
+    private bool Racket2On = false;
+    
+    
 
     public GameObject playerSprite;
     // Start is called before the first frame update
@@ -31,5 +37,23 @@ public class Player1Movement : MonoBehaviour
         transform.Translate(x, y, 0);
         x = 0;
         y = 0;
+
+        if (Input.GetKeyDown(KeyCode.D) && Racket1On == true)
+        {
+            Racket1On = false;
+            Racket2On = true;
+            Racket1.SetActive(false);
+            Racket2.SetActive(true);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.D) && Racket2On == true)
+        {
+            Racket2On = false;
+            Racket1On = true;
+      
+            Racket2.SetActive(false);
+            Racket1.SetActive(true); 
+        }
+
     }
 }
