@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115196519}
   - component: {fileID: 115196518}
-  - component: {fileID: 115196517}
+  - component: {fileID: 115196520}
   m_Layer: 0
   m_Name: Racket_It_1
   m_TagString: Untagged
@@ -141,51 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &115196517
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115196516}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.056879386, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 1.6875}
-    newSize: {x: 1.6875, y: 1.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.87050235, y: 1.6875}
-  m_EdgeRadius: 0
 --- !u!212 &115196518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -247,12 +202,57 @@ Transform:
   m_GameObject: {fileID: 115196516}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.045714375, y: 1.1399999, z: 0}
-  m_LocalScale: {x: 0.7142857, y: 0.7142857, z: 0.7142857}
+  m_LocalPosition: {x: -0.22499986, y: 1.2349997, z: 0}
+  m_LocalScale: {x: 1.7857143, y: 1.7857143, z: 1.7857143}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1856668725}
+  m_Father: {fileID: 385149659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &115196520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115196516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07000637, y: 0.023335457}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6875, y: 1.6875}
+    newSize: {x: 1.6875, y: 1.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9874363, y: 1.7341709}
+  m_EdgeRadius: 0
 --- !u!1 &385149658
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +264,9 @@ GameObject:
   - component: {fileID: 385149659}
   - component: {fileID: 385149661}
   - component: {fileID: 385149660}
+  - component: {fileID: 385149662}
   m_Layer: 0
-  m_Name: Badminton_Players_Hands_it1
+  m_Name: Top Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,10 +281,11 @@ Transform:
   m_GameObject: {fileID: 385149658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015, y: 0.699, z: 0}
+  m_LocalPosition: {x: 0, y: 0.676, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 115196519}
   m_Father: {fileID: 1856668725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &385149660
@@ -373,6 +375,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &385149662
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385149658}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5f3bc35c6cd9584e9e328e2baa1e349, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,8 +574,6 @@ Transform:
   m_Children:
   - {fileID: 1902984337}
   - {fileID: 1782196292}
-  - {fileID: 1667823854}
-  - {fileID: 1248735148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &583625080
@@ -626,7 +647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022234100}
   - component: {fileID: 1022234102}
-  - component: {fileID: 1022234101}
+  - component: {fileID: 1022234103}
   m_Layer: 0
   m_Name: Racket_It_1 2
   m_TagString: Untagged
@@ -642,58 +663,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022234099}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.09, y: -1.14, z: 0}
-  m_LocalScale: {x: 0.7142857, y: 0.7142857, z: 0.7142857}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: -0.21666674, y: -1.1690474, z: 0}
+  m_LocalScale: {x: 1.70068, y: 1.70068, z: 1.70068}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1856668725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!61 &1022234101
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022234099}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.056879386, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 1.6875}
-    newSize: {x: 1.6875, y: 1.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.87050235, y: 1.6875}
-  m_EdgeRadius: 0
+  m_Father: {fileID: 1047999291}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!212 &1022234102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -746,6 +722,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1022234103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022234099}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.060974598, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6875, y: 1.6875}
+    newSize: {x: 1.6875, y: 1.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91515803, y: 1.6875}
+  m_EdgeRadius: 0
 --- !u!1 &1047999290
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,8 +778,9 @@ GameObject:
   - component: {fileID: 1047999291}
   - component: {fileID: 1047999293}
   - component: {fileID: 1047999292}
+  - component: {fileID: 1047999294}
   m_Layer: 0
-  m_Name: Badminton_Players_Hands_it1 (1)
+  m_Name: 'Bottom hand '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,7 +798,8 @@ Transform:
   m_LocalPosition: {x: 0.022, y: -0.649, z: 0}
   m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1022234100}
   m_Father: {fileID: 1856668725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1047999292
@@ -866,6 +889,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1047999294
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047999290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b702208cec505247994e9d935de5e29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1248735147
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,12 +936,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248735147}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.09, y: -1.17, z: 0}
-  m_LocalScale: {x: 1.020408, y: 1.020408, z: 1.020408}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.19333282, y: -1.115333, z: 0}
+  m_LocalScale: {x: 2.380952, y: 2.380952, z: 2.380952}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 583625078}
+  m_Father: {fileID: 1782196292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &1248735149
 BoxCollider2D:
@@ -1107,11 +1151,11 @@ Transform:
   m_GameObject: {fileID: 1667823853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0857142, y: 1.1428571, z: 0}
-  m_LocalScale: {x: 1.020408, y: 1.020408, z: 1.020408}
+  m_LocalPosition: {x: -0.21666683, y: 1.1, z: 0}
+  m_LocalScale: {x: 2.53, y: 2.53, z: 2.53}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 583625078}
+  m_Father: {fileID: 1902984337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1667823855
 BoxCollider2D:
@@ -1221,8 +1265,9 @@ GameObject:
   - component: {fileID: 1782196292}
   - component: {fileID: 1782196293}
   - component: {fileID: 1782196294}
+  - component: {fileID: 1782196295}
   m_Layer: 0
-  m_Name: Badminton_Players_Hands_it2 (1)
+  m_Name: Bottom Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1285,8 @@ Transform:
   m_LocalPosition: {x: 0.00714302, y: -0.692, z: 0}
   m_LocalScale: {x: 0.42857143, y: 0.42857143, z: 0.42857143}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1248735148}
   m_Father: {fileID: 583625078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1782196293
@@ -1330,6 +1376,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000011920929}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!95 &1782196295
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782196291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce4f962d877bb8246aca9c843ca8ae4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1856668723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,8 +1484,6 @@ Transform:
   m_Children:
   - {fileID: 385149659}
   - {fileID: 1047999291}
-  - {fileID: 115196519}
-  - {fileID: 1022234100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1856668726
@@ -1520,8 +1585,9 @@ GameObject:
   - component: {fileID: 1902984337}
   - component: {fileID: 1902984336}
   - component: {fileID: 1902984338}
+  - component: {fileID: 1902984339}
   m_Layer: 0
-  m_Name: Badminton_Players_Hands_it2
+  m_Name: 'Top Hand '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,10 +1654,11 @@ Transform:
   m_GameObject: {fileID: 1902984335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00714302, y: 0.70285714, z: 0}
+  m_LocalPosition: {x: 0.00714302, y: 0.7028571, z: 0}
   m_LocalScale: {x: 0.42857143, y: 0.42857143, z: 0.42857143}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1667823854}
   m_Father: {fileID: 583625078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1902984338
@@ -1629,6 +1696,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!95 &1902984339
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902984335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 759a9365f26859848b20c94289f4add0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1941945921
 GameObject:
   m_ObjectHideFlags: 0

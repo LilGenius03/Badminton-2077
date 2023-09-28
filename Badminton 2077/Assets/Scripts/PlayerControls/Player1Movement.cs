@@ -6,14 +6,15 @@ public class Player1Movement : MonoBehaviour
 {
     public  float gridSize = 1f;
     private float x, y;
-    public GameObject Racket1;
-    public GameObject Racket2;
+    
     private bool Racket1On = true;
     private bool Racket2On = false;
     
     
 
     public GameObject playerSprite;
+    public GameObject Racket1;
+    public GameObject Racket2;
     // Start is called before the first frame update
     void Start()
     {
