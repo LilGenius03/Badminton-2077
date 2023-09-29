@@ -1767,8 +1767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468ca0739d34bd745b616eb70b0e8da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1856668731}
-  A: 0
 --- !u!1 &1902984335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,10 +2054,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2083,10 +2081,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d42e4cc09eb6b4c959fadd0be0a28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   rb: {fileID: 1941945925}
   rotationSpeed: 1
   rotationTime: 2
+  WaitForRotation: 3
 --- !u!1 &1978923926
 GameObject:
   m_ObjectHideFlags: 0

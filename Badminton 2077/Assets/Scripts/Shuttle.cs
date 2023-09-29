@@ -9,18 +9,18 @@ public class Shuttle : MonoBehaviour
     public Rigidbody2D rb;
     public float rotationSpeed = 1f;
     public float rotationTime = 2f;
+    public float WaitForRotation = 3f;
     float timeleft;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(RotationMode());
-        Launch();
+        StartCoroutine(Launch());
+        
     }
 
-    IEnumerator RotationMode()
+    IEnumerator Launch()
     {
-        yield return new WaitForSeconds(rotationTime);
 
         timeleft -= Time.deltaTime;
 
@@ -33,16 +33,17 @@ public class Shuttle : MonoBehaviour
         {
             gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
         }
-        
+
+        yield return new WaitForSecondsRealtime(WaitForRotation);
+
+
+        float x = Random.Range(0, 2) == 0 ? -4 : 4;
+        float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        rb.velocity = new Vector2(speed * x, speed * y);
+
     }
    
 
-   private void Launch()
-   {
-       
-
-        float x = Random.Range(0, 2) == 0 ? -4 : 4;
-        float y = Random.Range(0, 2) == 0  ? -4 : 4 ;
-        rb.velocity = new Vector2 (speed * x , speed * y );
-   }
+     
+   
 }
