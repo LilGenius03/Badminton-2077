@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Obstacle2
+  - Shuttle
   layers:
   - Default
   - TransparentFX
