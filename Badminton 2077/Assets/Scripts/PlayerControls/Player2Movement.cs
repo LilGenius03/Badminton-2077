@@ -9,6 +9,10 @@ public class Player2Movement : MonoBehaviour
 
     private bool Racket1On = true;
     private bool Racket2On = false;
+    public int MinSupeMeter = 0;
+    public int currentMeter;
+
+    public SuperMeter Supermeter;
 
     public GameObject Racket1;
     public GameObject Racket2;
@@ -16,7 +20,7 @@ public class Player2Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Supermeter.SetMeter(MinSupeMeter);
     }
 
     // Update is called once per frame
@@ -28,10 +32,12 @@ public class Player2Movement : MonoBehaviour
         if (uparrow)
         {
             y = gridSize;
+            MeterIncrease(1);
         }
         if (downarrow)
         {
             y = -gridSize;
+            MeterIncrease(1);
         }
         transform.Translate(x, y, 0);
         x = 0;
@@ -64,5 +70,11 @@ public class Player2Movement : MonoBehaviour
         {
             y = gridSize;
         }
+    }
+
+    void MeterIncrease(int increase)
+    {
+        currentMeter += increase;
+        Supermeter.SetMeter(currentMeter);
     }
 }

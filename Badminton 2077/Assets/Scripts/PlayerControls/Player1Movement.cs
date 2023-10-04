@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player1Movement : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class Player1Movement : MonoBehaviour
     
     private bool Racket1On = true;
     private bool Racket2On = false;
-    
-    
+    public SuperMeter Supermeter;
+    public int MinSupeMeter = 0;
+    public int currentMeter;
 
     public GameObject playerSprite;
     public GameObject Racket1;
@@ -18,7 +20,7 @@ public class Player1Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Supermeter.SetMeter(MinSupeMeter);
     }
 
     // Update is called once per frame
@@ -30,10 +32,14 @@ public class Player1Movement : MonoBehaviour
         if (w)
         {
             y = gridSize;
+            MeterIncrease(1);
+
         }
         if (s)
         {
             y = -gridSize;
+            MeterIncrease(1);
+
         }
         transform.Translate(x, y, 0);
         x = 0;
@@ -67,5 +73,11 @@ public class Player1Movement : MonoBehaviour
         {
             y = gridSize;
         }
+    }
+
+    void MeterIncrease(int increase)
+    {
+        currentMeter += increase;
+        Supermeter.SetMeter(currentMeter);
     }
 }
