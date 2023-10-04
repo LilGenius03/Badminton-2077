@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Obstacle2
   - Shuttle
+  - Orange Portal
+  - Blue Portal
   layers:
   - Default
   - TransparentFX
