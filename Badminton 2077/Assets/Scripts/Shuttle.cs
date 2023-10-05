@@ -22,11 +22,6 @@ public class Shuttle : MonoBehaviour
         ShuttleScored = false;
     }
 
-    private void Update()
-    {
-        Debug.Log(speed);
-    }
-
     IEnumerator Launch()
     {
 
