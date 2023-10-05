@@ -59,6 +59,13 @@ public class Player2Movement : MonoBehaviour
             Racket2.SetActive(false);
             Racket1.SetActive(true);
         }
+
+        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            currentMeter -= 1 / 3;
+        }
+
+        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
