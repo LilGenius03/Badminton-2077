@@ -19,6 +19,11 @@ public class Shuttle : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        Debug.Log(speed);
+    }
+
     IEnumerator Launch()
     {
 
