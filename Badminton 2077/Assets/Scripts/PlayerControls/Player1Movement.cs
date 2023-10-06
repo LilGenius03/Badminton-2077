@@ -15,8 +15,6 @@ public class Player1Movement : MonoBehaviour
     public SuperMeter Supermeter;
     public int MinSupeMeter = 0;
     public int currentMeter;
-    float timer;
-    //float holdTime = 2.0f;
 
     public GameObject playerSprite;
     public GameObject Racket1;
@@ -62,15 +60,6 @@ public class Player1Movement : MonoBehaviour
                 MeterIncrease(-currentMeter);
             }
         }
-
-
-
-
-
-        /*if (!a)
-        {
-            timer = 0f;
-        }*/
 
         if (Input.GetKeyDown(KeyCode.D) && Racket1On == true)
         {
