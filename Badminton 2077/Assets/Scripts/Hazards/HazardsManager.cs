@@ -8,6 +8,7 @@ public class HazardsManager : MonoBehaviour
     public int[] position;
     public GameObject[] hazards;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,18 @@ public class HazardsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      int randomIndex = Random.Range(0, position.Length);
+      
+      if(Input.GetKeyDown(KeyCode.Space))
+      {
+            int randomIndux = Random.Range(0, hazards.Length);
+            int randPos = Random.Range(0, position.Length);
+            Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
+
+            Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
+      }
+        
+        
+        
       
     }
 }

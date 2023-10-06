@@ -15,6 +15,8 @@ public class Player1Movement : MonoBehaviour
     public SuperMeter Supermeter;
     public int MinSupeMeter = 0;
     public int currentMeter;
+    float timer;
+    //float holdTime = 2.0f;
 
     public GameObject playerSprite;
     public GameObject Racket1;
@@ -30,7 +32,7 @@ public class Player1Movement : MonoBehaviour
     {
         bool w = Input.GetKeyDown(KeyCode.W);
         bool s = Input.GetKeyDown(KeyCode.S);
-        bool a = Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D);
+        bool power = Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D);
 
         if (w)
         {
@@ -48,7 +50,7 @@ public class Player1Movement : MonoBehaviour
         x = 0;
         y = 0;
 
-        if (a)
+        if (power)
         {
             if (currentMeter >= 25 && currentMeter <= 49)
             {
