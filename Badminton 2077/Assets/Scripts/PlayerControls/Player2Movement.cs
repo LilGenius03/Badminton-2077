@@ -17,6 +17,9 @@ public class Player2Movement : MonoBehaviour
     public GameObject Racket1;
     public GameObject Racket2;
     public GameObject player2Sprite;
+
+    private bool ZeroMeter = true;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -60,9 +63,15 @@ public class Player2Movement : MonoBehaviour
             Racket1.SetActive(true);
         }
 
-        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow) && ZeroMeter == false)
         {
             currentMeter -= 1 / 3;
+        }
+
+        else if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow) && currentMeter == 50)
+        {
+            currentMeter = 0;
+            ZeroMeter = true;
         }
 
         
