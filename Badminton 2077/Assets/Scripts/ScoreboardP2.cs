@@ -13,7 +13,7 @@ public class ScoreboardP2 : MonoBehaviour
 
     private void Start()
     {
-        player2Score = 0;
+        player2Score = -1;
         VictoryP2 = false;
         player1Score = GameObject.Find("ShuttleCatchP1").GetComponent<ScoreboardP1>().player1Score;
         ShuttleReset = false;

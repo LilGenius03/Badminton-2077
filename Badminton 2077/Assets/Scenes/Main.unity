@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 416734225}
+  scoreText: {fileID: 1165865038}
 --- !u!114 &416734225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 1165865038}
+  scoreText: {fileID: 416734225}
 --- !u!114 &1165865038
 MonoBehaviour:
   m_ObjectHideFlags: 0

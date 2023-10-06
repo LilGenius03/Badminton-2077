@@ -1,9 +1,11 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HazardItemBox : MonoBehaviour
+public class HazardsManager : MonoBehaviour
 {
+    public int[] position;
     public GameObject[] hazards;
     
     // Start is called before the first frame update
@@ -15,6 +17,7 @@ public class HazardItemBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      int randomIndex = Random.Range(0, position.Length);
+      
     }
 }
