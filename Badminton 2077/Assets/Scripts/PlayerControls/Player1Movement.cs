@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +15,8 @@ public class Player1Movement : MonoBehaviour
     public SuperMeter Supermeter;
     public int MinSupeMeter = 0;
     public int currentMeter;
+    float timer;
+    //float holdTime = 2.0f;
 
     public GameObject playerSprite;
     public GameObject Racket1;
@@ -28,6 +32,7 @@ public class Player1Movement : MonoBehaviour
     {
         bool w = Input.GetKeyDown(KeyCode.W);
         bool s = Input.GetKeyDown(KeyCode.S);
+        bool a = Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D);
 
         if (w)
         {
@@ -44,6 +49,28 @@ public class Player1Movement : MonoBehaviour
         transform.Translate(x, y, 0);
         x = 0;
         y = 0;
+
+        if (a)
+        {
+            if (currentMeter >= 25 && currentMeter <= 49)
+            {
+                MeterIncrease(-25);
+            }
+
+            else if (currentMeter >= 50)
+            {
+                MeterIncrease(-currentMeter);
+            }
+        }
+
+
+
+
+
+        /*if (!a)
+        {
+            timer = 0f;
+        }*/
 
         if (Input.GetKeyDown(KeyCode.D) && Racket1On == true)
         {
