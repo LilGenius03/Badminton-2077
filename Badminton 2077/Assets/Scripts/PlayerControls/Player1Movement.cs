@@ -13,6 +13,9 @@ public class Player1Movement : MonoBehaviour
     private bool Racket1On = true;
     private bool Racket2On = false;
     public SuperMeter Supermeter;
+    public AudioSource hit;
+    public AudioSource PowershotTierOne;
+    public AudioSource PowershotTierTwo;
     public int MinSupeMeter = 0;
     public int currentMeter;
     float timer;
@@ -32,6 +35,7 @@ public class Player1Movement : MonoBehaviour
     {
         bool w = Input.GetKeyDown(KeyCode.W);
         bool s = Input.GetKeyDown(KeyCode.S);
+        bool a = Input .GetKeyDown(KeyCode.A);
         bool power = Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D);
 
         if (w)
@@ -46,6 +50,11 @@ public class Player1Movement : MonoBehaviour
             MeterIncrease(1);
 
         }
+
+        if (a)
+        {
+            hit.Play();
+        }
         transform.Translate(x, y, 0);
         x = 0;
         y = 0;
@@ -55,11 +64,15 @@ public class Player1Movement : MonoBehaviour
             if (currentMeter >= 25 && currentMeter <= 49)
             {
                 MeterIncrease(-25);
+                PowershotTierOne.Play();
+                hit.Stop();
             }
 
             else if (currentMeter >= 50)
             {
                 MeterIncrease(-currentMeter);
+                PowershotTierTwo.Play();
+                hit.Stop();
             }
         }
 

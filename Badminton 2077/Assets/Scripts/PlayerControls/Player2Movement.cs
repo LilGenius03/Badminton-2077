@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class Player2Movement : MonoBehaviour
     public GameObject Racket1;
     public GameObject Racket2;
     public GameObject player2Sprite;
+    public AudioSource hit;
+    public AudioSource PowershotTierOne;
+    public AudioSource PowershotTierTwo;
 
     
    
@@ -31,6 +35,7 @@ public class Player2Movement : MonoBehaviour
     {
         bool uparrow = Input.GetKeyDown(KeyCode.UpArrow);
         bool downarrow = Input.GetKeyDown(KeyCode.DownArrow);
+        bool rightarrow = Input .GetKey(KeyCode.RightArrow);
         bool power = Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow);
 
 
@@ -47,6 +52,11 @@ public class Player2Movement : MonoBehaviour
         transform.Translate(x, y, 0);
         x = 0;
         y = 0;
+
+        if(rightarrow)
+        {
+            hit.Play();
+        }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true)
         {
@@ -70,11 +80,15 @@ public class Player2Movement : MonoBehaviour
             if(currentMeter >= 25 && currentMeter <= 49)
             {
                 MeterIncrease(-25);
+                PowershotTierOne.Play();
+                hit.Stop();
             }
 
             else if(currentMeter >= 50)
             {
                 MeterIncrease(-currentMeter);
+                PowershotTierTwo.Play();
+                hit.Stop();
             }
         }
 
