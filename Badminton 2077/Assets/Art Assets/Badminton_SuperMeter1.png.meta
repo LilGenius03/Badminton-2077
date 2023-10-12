@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 530
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55db0a9b92bbfe49b75436106c59da0
+      internalID: -693948374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1aacf7f45c8824b9af29a70cde4234
+      internalID: -1401357584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00040bd5004204e9ded5e06380556f
+      internalID: 551281341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab128add6ccc38640bfe42fc6d51d146
+      internalID: 2075042130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb404315cc59dbe42b2b6a51e8cbbe31
+      internalID: -424841442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8659a57fc52907a4e9702f70853c7e48
+      internalID: -1929017974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14b39d1086d42d46974940222808e43
+      internalID: 1876348213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e5eb82157312243981d35e6e9dcc19
+      internalID: -2007147854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Badminton_SuperMeter1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b75da847ab9c845af779d483fe1a57
+      internalID: -1699335729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Badminton_SuperMeter1_0: -693948374
+      Badminton_SuperMeter1_1: -1401357584
+      Badminton_SuperMeter1_2: 551281341
+      Badminton_SuperMeter1_3: 2075042130
+      Badminton_SuperMeter1_4: -424841442
+      Badminton_SuperMeter1_5: -1929017974
+      Badminton_SuperMeter1_6: 1876348213
+      Badminton_SuperMeter1_7: -2007147854
+      Badminton_SuperMeter1_8: -1699335729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

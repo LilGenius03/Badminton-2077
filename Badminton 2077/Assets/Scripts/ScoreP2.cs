@@ -14,6 +14,6 @@ public class ScoreP2 : MonoBehaviour
     void Update()
     {
         score = GameObject.Find("ShuttleCatchP2").GetComponent<ScoreboardP2>().player2Score;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
     }
 }
