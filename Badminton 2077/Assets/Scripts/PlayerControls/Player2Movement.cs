@@ -21,9 +21,10 @@ public class Player2Movement : MonoBehaviour
     public AudioSource hit;
     public AudioSource PowershotTierOne;
     public AudioSource PowershotTierTwo;
+    public ParticleSystem SuperMeterhalfWay;
 
-    
-   
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +59,12 @@ public class Player2Movement : MonoBehaviour
             hit.Play();
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true)
+        if (currentMeter == 25)
+        {
+            SuperMeterhalfWay.Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true)
         {
             Racket1On = false;
             Racket2On = true;

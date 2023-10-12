@@ -16,6 +16,7 @@ public class Player1Movement : MonoBehaviour
     public AudioSource hit;
     public AudioSource PowershotTierOne;
     public AudioSource PowershotTierTwo;
+    public ParticleSystem SuperMeterhalfWay;
     public int MinSupeMeter = 0;
     public int currentMeter;
     float timer;
@@ -58,6 +59,11 @@ public class Player1Movement : MonoBehaviour
         transform.Translate(x, y, 0);
         x = 0;
         y = 0;
+
+        if(currentMeter == 25)
+        {
+            SuperMeterhalfWay.Play();
+        }
 
         if (power)
         {
