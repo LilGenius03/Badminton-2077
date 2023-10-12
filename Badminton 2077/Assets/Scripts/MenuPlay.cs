@@ -7,6 +7,6 @@ public class MenuPlay : MonoBehaviour
 {
     public void LoadIntroScene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("RacketSelect");
     }
 }
