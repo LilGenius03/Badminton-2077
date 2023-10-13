@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3097565654485519180}
   - component: {fileID: 8949684517909380270}
   - component: {fileID: 135510622205251690}
-  - component: {fileID: 167161141424657540}
+  - component: {fileID: 1705042733213611636}
   m_Layer: 0
   m_Name: Shuttle
   m_TagString: Shuttle
@@ -144,12 +144,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d42e4cc09eb6b4c959fadd0be0a28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  rb: {fileID: 167161141424657540}
+  speed: 10
+  decel: 0.15
   rotationSpeed: 1
   rotationTime: 2
   WaitForRotation: 3
---- !u!50 &167161141424657540
+  timeleft: 2
+  ShuttleReset: 1
+  ShuttleScored: 0
+  dest:
+  - {x: 0, y: 0, z: 0}
+  - {x: 5, y: 4, z: 0}
+  - {x: 5, y: 2.9, z: 0}
+  - {x: 5, y: 1.5, z: 0}
+  - {x: 5, y: 0, z: 0}
+  - {x: 5, y: -1.5, z: 0}
+  - {x: 5, y: -2.9, z: 0}
+  - {x: 5, y: -4, z: 0}
+  - {x: -5, y: 4, z: 0}
+  - {x: -5, y: 2.9, z: 0}
+  - {x: -5, y: 1.5, z: 0}
+  - {x: -5, y: 0, z: 0}
+  - {x: -5, y: -1.5, z: 0}
+  - {x: -5, y: -2.9, z: 0}
+  - {x: -5, y: -4, z: 0}
+  target: 0
+--- !u!50 &1705042733213611636
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -157,14 +177,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8615557911825341650}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

@@ -72,6 +72,14 @@ public class Player1Movement : MonoBehaviour
                 MeterIncrease(-25);
                 PowershotTierOne.Play();
                 hit.Stop();
+                if(Racket1On == true && Racket2On != true)
+                {
+                    Racket1.GetComponent<Hit>().power = 2;
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    Racket2.GetComponent<Hit>().power = 2;
+                }
             }
 
             else if (currentMeter >= 50)
