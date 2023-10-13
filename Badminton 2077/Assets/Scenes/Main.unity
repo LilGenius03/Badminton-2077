@@ -6935,7 +6935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1248735148
 Transform:
   m_ObjectHideFlags: 0
@@ -7060,8 +7060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c94cef2d3cf79a4093245a8eb4e4b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: 1
-  player: -1
+  hand: -1
+  player: 1
   speed: 10
   power: 1
   change: 0
@@ -7304,7 +7304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667823854
 Transform:
   m_ObjectHideFlags: 0
@@ -13302,11 +13302,11 @@ PrefabInstance:
       objectReference: {fileID: 416734225}
     - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: target
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: ShuttleReset
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.x

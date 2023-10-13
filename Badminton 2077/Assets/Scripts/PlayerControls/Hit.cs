@@ -23,7 +23,7 @@ public class Hit : MonoBehaviour
             col.GetComponent<Shuttle>().speed = speed;
             col.GetComponent<Shuttle>().change = change;
             power = 1;
-            Debug.Log(power);
+            //Debug.Log(power);
             speed = 10;
             change = false;
         }
