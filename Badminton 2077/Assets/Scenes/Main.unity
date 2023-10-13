@@ -736,6 +736,8 @@ GameObject:
   - component: {fileID: 115196519}
   - component: {fileID: 115196518}
   - component: {fileID: 115196520}
+  - component: {fileID: 115196521}
+  - component: {fileID: 115196522}
   m_Layer: 0
   m_Name: Racket_It_1
   m_TagString: Untagged
@@ -804,7 +806,7 @@ Transform:
   m_GameObject: {fileID: 115196516}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9, y: 1.04, z: 0}
+  m_LocalPosition: {x: -0.73, y: 1.1, z: 0}
   m_LocalScale: {x: 1.7857143, y: 1.7857143, z: 1.7857143}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -839,7 +841,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07000637, y: 0.023335457}
@@ -855,6 +857,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9874363, y: 1.7341709}
   m_EdgeRadius: 0
+--- !u!114 &115196521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115196516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c94cef2d3cf79a4093245a8eb4e4b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: 1
+  player: -1
+  speed: 10
+  power: 1
+  change: 0
+--- !u!50 &115196522
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115196516}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &385149658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1713,7 @@ GameObject:
   - component: {fileID: 1022234100}
   - component: {fileID: 1022234102}
   - component: {fileID: 1022234103}
+  - component: {fileID: 1022234104}
   m_Layer: 0
   m_Name: Racket_It_1 2
   m_TagString: Untagged
@@ -1770,7 +1817,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.060974598, y: 0}
@@ -1786,6 +1833,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91515803, y: 1.6875}
   m_EdgeRadius: 0
+--- !u!114 &1022234104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022234099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c94cef2d3cf79a4093245a8eb4e4b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: -1
+  player: -1
+  speed: 0
+  power: 0
+  change: 0
 --- !u!1 &1047999290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6904,7 @@ GameObject:
   - component: {fileID: 1248735148}
   - component: {fileID: 1248735150}
   - component: {fileID: 1248735149}
+  - component: {fileID: 1248735151}
   m_Layer: 0
   m_Name: Racket_It_5 2
   m_TagString: Untagged
@@ -6891,7 +6956,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.022499286, y: 0}
@@ -6959,6 +7024,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1248735151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248735147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c94cef2d3cf79a4093245a8eb4e4b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: 1
+  player: -1
+  speed: 0
+  power: 0
+  change: 0
 --- !u!1 &1316870693
 GameObject:
   m_ObjectHideFlags: 0
@@ -7191,6 +7273,7 @@ GameObject:
   - component: {fileID: 1667823854}
   - component: {fileID: 1667823856}
   - component: {fileID: 1667823855}
+  - component: {fileID: 1667823857}
   m_Layer: 0
   m_Name: Racket_It_5
   m_TagString: Untagged
@@ -7242,7 +7325,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.022499286, y: 0}
@@ -7310,6 +7393,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1667823857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667823853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c94cef2d3cf79a4093245a8eb4e4b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: 1
+  player: 1
+  speed: 0
+  power: 0
+  change: 0
 --- !u!1 &1687913961
 GameObject:
   m_ObjectHideFlags: 0
@@ -13163,9 +13263,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: change
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: target
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: ShuttleReset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13206,10 +13318,6 @@ PrefabInstance:
     - target: {fileID: 8615557911825341650, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_Name
       value: Shuttle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8949684517909380270, guid: dd530420baa218c428404ca5551280e7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

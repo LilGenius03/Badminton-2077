@@ -6,66 +6,73 @@ using UnityEngine;
 public class Shuttle : MonoBehaviour
 {
     public float speed;
-    public Rigidbody2D rb;
+    public float decel;
     public float rotationSpeed = 1f;
     public float rotationTime = 2f;
     public float WaitForRotation = 3f;
-    float timeleft;
+    public float timeleft;
     public bool ShuttleReset;
-    public bool ResetShuttle;
     public bool ShuttleScored;
+    public Vector3[] dest = new Vector3[15];
+    public bool change = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public int target = 0;
+
+
+    private void FixedUpdate()
     {
-        StartCoroutine(Launch());
-        ShuttleScored = false;
+        if (change && transform.position.x <= 0.1&& transform.position.x >= -0.1)
+        {
+            target++;
+            change = false;
+        }
+        if (ShuttleReset)
+        {
+            //Launch();
+        }
+        else if(!ShuttleReset)
+        {
+            Move();
+        }
+        if(transform.position == dest[target]||speed <= 0)
+        {
+            ShuttleReset = true;
+        }
     }
 
-    IEnumerator Launch()
+    void Move()
     {
+        if (speed > 0 && transform.position != dest[target])
+        {
+            speed -= decel;
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, dest[target], step);
+        }
+    }
 
-        rb.velocity = new Vector2(0, 0);
-
+    void Launch()
+    {
         timeleft -= Time.deltaTime;
-
+        transform.position = dest[0];
         if (timeleft < 0)
         {
             timeleft = rotationTime;
+            ShuttleReset = false;
+            speed = 10;
+            target = (Random.Range(1, 14));
+            if(target == 7|| target == 8)
+            {
+                target -= 2;
+            }
         }
 
         if (timeleft > 0)
         {
             gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
         }
-
-        yield return new WaitForSecondsRealtime(WaitForRotation);
-
-
-        float x = Random.Range(0, 2) == 0 ? -4 : 4;
-        float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        rb.velocity = new Vector2(speed * x, speed * y);
-
-        if (ResetShuttle == false && ShuttleReset == false)
-        {
-            ShuttleScored = false;
-        }
-
     }
 
-    private void Update()
-    {
-        ResetShuttle = GameObject.Find("ShuttleCatchP1").GetComponent<ScoreboardP1>().ResetShuttle;
-        ShuttleReset = GameObject.Find("ShuttleCatchP2").GetComponent<ScoreboardP2>().ShuttleReset;
 
-        if (ResetShuttle == true | ShuttleReset == true)
-        {
-            transform.position = new Vector2(0, 0);
-            ShuttleScored = true;
-            StartCoroutine(Launch());
-        }
-
-    }
 
 
 }
