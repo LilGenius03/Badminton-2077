@@ -14,15 +14,21 @@ public class Shuttle : MonoBehaviour
     public bool ShuttleReset;
     public bool ShuttleScored;
     public Vector3[] dest = new Vector3[15];
+    public bool change = false;
 
     public int target = 0;
 
 
     private void FixedUpdate()
     {
-        if(ShuttleReset)
+        if (change && transform.position.x <= 0.1&& transform.position.x >= -0.1)
         {
-            Launch();
+            target++;
+            change = false;
+        }
+        if (ShuttleReset)
+        {
+            //Launch();
         }
         else if(!ShuttleReset)
         {

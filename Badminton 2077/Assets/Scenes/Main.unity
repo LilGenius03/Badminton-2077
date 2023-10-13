@@ -873,6 +873,7 @@ MonoBehaviour:
   player: -1
   speed: 10
   power: 1
+  change: 0
 --- !u!50 &115196522
 Rigidbody2D:
   serializedVersion: 4
@@ -1848,6 +1849,7 @@ MonoBehaviour:
   player: -1
   speed: 0
   power: 0
+  change: 0
 --- !u!1 &1047999290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,6 +7040,7 @@ MonoBehaviour:
   player: -1
   speed: 0
   power: 0
+  change: 0
 --- !u!1 &1316870693
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,6 +7409,7 @@ MonoBehaviour:
   player: 1
   speed: 0
   power: 0
+  change: 0
 --- !u!1 &1687913961
 GameObject:
   m_ObjectHideFlags: 0
@@ -13259,6 +13263,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: change
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: target
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: ShuttleReset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3

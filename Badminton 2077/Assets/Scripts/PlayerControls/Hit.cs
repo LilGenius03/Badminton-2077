@@ -8,6 +8,7 @@ public class Hit : MonoBehaviour
     public int player;
     public float speed;
     public int power;
+    public bool change;
 
 
     void OnTriggerEnter2D(Collider2D col)
@@ -20,9 +21,11 @@ public class Hit : MonoBehaviour
             Debug.Log(col.GetComponent<Shuttle>().target + (7 * player) + (1 * hand));*/
             col.GetComponent<Shuttle>().target = col.GetComponent<Shuttle>().target + (7 * player) + (power * hand);
             col.GetComponent<Shuttle>().speed = speed;
+            col.GetComponent<Shuttle>().change = change;
             power = 1;
             Debug.Log(power);
             speed = 10;
+            change = false;
         }
     }
 }
