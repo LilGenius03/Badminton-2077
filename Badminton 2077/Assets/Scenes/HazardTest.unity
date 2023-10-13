@@ -911,6 +911,10 @@ MonoBehaviour:
   Racket1: {fileID: 1667823853}
   Racket2: {fileID: 1248735147}
   player2Sprite: {fileID: 583625076}
+  hit: {fileID: 0}
+  PowershotTierOne: {fileID: 0}
+  PowershotTierTwo: {fileID: 0}
+  SuperMeterhalfWay: {fileID: 0}
 --- !u!61 &583625081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2050,7 +2054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1603578153
 Transform:
   m_ObjectHideFlags: 0
@@ -2445,6 +2449,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 1
   Supermeter: {fileID: 1360474774}
+  hit: {fileID: 0}
+  PowershotTierOne: {fileID: 0}
+  PowershotTierTwo: {fileID: 0}
+  SuperMeterhalfWay: {fileID: 0}
   MinSupeMeter: 0
   currentMeter: 0
   playerSprite: {fileID: 1856668723}
