@@ -15,7 +15,7 @@ public class ScoreboardP1 : MonoBehaviour
     {
         player1Score = -2;
         VictoryP1 = false;
-        player2Score = GameObject.Find("ShuttleCatchP2").GetComponent<ScoreboardP2>().player2Score;
+        //player2Score = GameObject.Find("ShuttleCatchP2").GetComponent<ScoreboardP2>().player2Score;
         ResetShuttle = false;
     }
 

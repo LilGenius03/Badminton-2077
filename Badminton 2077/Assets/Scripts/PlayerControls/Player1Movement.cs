@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Player1Movement : MonoBehaviour
 {
+    public Animator anim;
     public  float gridSize = 1f;
     private float x, y;
     
@@ -54,6 +55,14 @@ public class Player1Movement : MonoBehaviour
 
         if (a)
         {
+            if (Racket1On == true && Racket2On != true)
+            {
+                anim.SetTrigger("SwingTop");
+            }
+            else if (Racket1On != true && Racket2On == true)
+            {
+                anim.SetTrigger("SwingBottom");
+            }
             hit.Play();
         }
         transform.Translate(x, y, 0);

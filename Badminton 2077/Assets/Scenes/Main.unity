@@ -805,7 +805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115196516}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.73, y: 1.1, z: 0}
   m_LocalScale: {x: 1.7857143, y: 1.7857143, z: 1.7857143}
   m_ConstrainProportionsScale: 1
@@ -819,7 +819,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115196516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416734222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26c20d72c582d194b92c4674c098d416, type: 3}
   m_Name: 
@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 583625077}
   - component: {fileID: 583625080}
   - component: {fileID: 583625081}
+  - component: {fileID: 583625082}
   m_Layer: 0
   m_Name: 'Player 2 '
   m_TagString: Untagged
@@ -1308,6 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732b88e2671dfb04689b69b76afdb06e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 583625082}
   gridSize: 1
   MinSupeMeter: 0
   currentMeter: 0
@@ -1364,6 +1366,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &583625082
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583625076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 879f81fe685452740aa6b9854898d7eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &605755343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1818,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022234099}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1847,8 +1870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: -1
   player: -1
-  speed: 0
-  power: 0
+  speed: 10
+  power: 1
   change: 0
 --- !u!1 &1047999290
 GameObject:
@@ -6844,7 +6867,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165865035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de713a8932cb8bc41886be1918a4ea0c, type: 3}
   m_Name: 
@@ -6934,7 +6957,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248735147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -7038,8 +7061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: 1
   player: -1
-  speed: 0
-  power: 0
+  speed: 10
+  power: 1
   change: 0
 --- !u!1 &1316870693
 GameObject:
@@ -7303,7 +7326,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667823853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -7407,8 +7430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: 1
   player: 1
-  speed: 0
-  power: 0
+  speed: 10
+  power: 1
   change: 0
 --- !u!1 &1687913961
 GameObject:
@@ -7548,7 +7571,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1782196292}
   - component: {fileID: 1782196293}
-  - component: {fileID: 1782196295}
   - component: {fileID: 1782196294}
   m_Layer: 0
   m_Name: Bottom Hand
@@ -7660,27 +7682,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000011920929}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!95 &1782196295
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782196291}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce4f962d877bb8246aca9c843ca8ae4c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1821319247
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,6 +7769,7 @@ GameObject:
   - component: {fileID: 1856668724}
   - component: {fileID: 1856668730}
   - component: {fileID: 1856668726}
+  - component: {fileID: 1856668731}
   m_Layer: 0
   m_Name: 'Player 1 '
   m_TagString: Untagged
@@ -7856,6 +7858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e6cc2e0575adb4fbd911d0dfe6151c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1856668731}
   gridSize: 1
   Supermeter: {fileID: 1012310530029562296}
   hit: {fileID: 67559853}
@@ -7912,6 +7915,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1856668731
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856668723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9962ce0128b318f47b413f20d20a9843, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1902984335
 GameObject:
   m_ObjectHideFlags: 0
@@ -13268,6 +13292,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: score1
+      value: 
+      objectReference: {fileID: 1165865038}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: score2
+      value: 
+      objectReference: {fileID: 416734225}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: target
       value: 11
       objectReference: {fileID: 0}
@@ -13277,7 +13309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.y

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shuttle : MonoBehaviour
 {
@@ -18,9 +19,17 @@ public class Shuttle : MonoBehaviour
 
     public int target = 0;
 
+    int p1Score = 0;
+    int p2Score = 0;
+
+    public Text score1;
+    public Text score2;
 
     private void FixedUpdate()
     {
+        score1.text = p1Score.ToString();
+        score2.text = p2Score.ToString();
+
         if (change && transform.position.x <= 0.1&& transform.position.x >= -0.1)
         {
             target++;
@@ -28,7 +37,7 @@ public class Shuttle : MonoBehaviour
         }
         if (ShuttleReset)
         {
-            //Launch();
+            Launch();
         }
         else if(!ShuttleReset)
         {
@@ -36,7 +45,16 @@ public class Shuttle : MonoBehaviour
         }
         if(transform.position == dest[target]||speed <= 0)
         {
+            if(target == 1||target == 7|| target >=9 || target <=13)
+            {
+                p2Score++;
+            }
+            else if (target == 8 || target == 14 || target >= 2 || target <= 6)
+            {
+                p1Score++;
+            }
             ShuttleReset = true;
+
         }
     }
 
