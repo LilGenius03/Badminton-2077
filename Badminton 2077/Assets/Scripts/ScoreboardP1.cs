@@ -10,6 +10,7 @@ public class ScoreboardP1 : MonoBehaviour
     public bool VictoryP1;
     public bool ResetShuttle;
     public bool ShuttleScored;
+    public bool Scored = false;
 
     private void Start()
     {
@@ -17,11 +18,13 @@ public class ScoreboardP1 : MonoBehaviour
         VictoryP1 = false;
         player2Score = GameObject.Find("ShuttleCatchP2").GetComponent<ScoreboardP2>().player2Score;
         ResetShuttle = false;
+       
     }
 
     private void OnCollisionEnter2D(Collision2D Shuttle)
     {
         player1Score += 1;
+        Scored = true;
         ResetShuttle = true;
     }
 
