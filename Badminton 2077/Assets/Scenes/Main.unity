@@ -401,6 +401,7 @@ MonoBehaviour:
   VictoryP1: 0
   ResetShuttle: 0
   ShuttleScored: 0
+  Scored: 0
 --- !u!1 &8400589
 GameObject:
   m_ObjectHideFlags: 0
