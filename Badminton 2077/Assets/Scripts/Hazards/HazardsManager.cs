@@ -23,7 +23,7 @@ public class HazardsManager : MonoBehaviour
     void Update()
     {
 
-           if(shuttle.ShuttleReset == true)
+           if(shuttle.ShuttleReset == true && shuttle.speed > 0)
            {
              int randomIndux = Random.Range(0, hazards.Length);
              int randPos = Random.Range(0, position.Length);
@@ -31,6 +31,10 @@ public class HazardsManager : MonoBehaviour
 
              Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
            }
+
+           
+
+
 
         
       
