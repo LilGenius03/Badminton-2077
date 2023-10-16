@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Shuttle : MonoBehaviour
 {
@@ -56,6 +57,8 @@ public class Shuttle : MonoBehaviour
             ShuttleReset = true;
 
         }
+
+        EndGame();
     }
 
     void Move()
@@ -91,7 +94,18 @@ public class Shuttle : MonoBehaviour
         }
     }
 
+    void EndGame()
+    {
+        if(p1Score > p2Score + 1 && p1Score == 11)
+        {
+            SceneManager.LoadScene("Victory1");
+        }
 
+        else if(p2Score > p1Score + 1 && p2Score == 11)
+        {
+            SceneManager.LoadScene("Victory2");
+        }
+    }
 
 
 }

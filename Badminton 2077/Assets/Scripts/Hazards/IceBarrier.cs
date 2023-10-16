@@ -6,11 +6,15 @@ public class IceBarrier : MonoBehaviour
 {
     
     public Shuttle shuttle;
+    public GameObject Shuttle;
     public float slowDown = 0.1f;
-    
-    
 
-  
+    private void Start()
+    {
+        shuttle = Shuttle.GetComponent<Shuttle>();
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

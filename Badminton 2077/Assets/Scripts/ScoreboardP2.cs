@@ -10,19 +10,22 @@ public class ScoreboardP2 : MonoBehaviour
     public bool VictoryP2;
     public bool ShuttleReset;
     public bool ShuttleScored;
+    public bool ScoredP2 = false;
 
     private void Start()
     {
         player2Score = -1;
         VictoryP2 = false;
-        //player1Score = GameObject.Find("ShuttleCatchP1").GetComponent<ScoreboardP1>().player1Score;
+        player1Score = GameObject.Find("ShuttleCatchP1").GetComponent<ScoreboardP1>().player1Score;
         ShuttleReset = false;
+        ScoredP2 = false;
     }
 
     private void OnCollisionEnter2D(Collision2D Shuttle)
     {
         player2Score += 1;
         ShuttleReset = true;
+        ScoredP2 = true;
     }
 
     // Update is called once per frame
