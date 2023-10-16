@@ -45,11 +45,11 @@ public class Shuttle : MonoBehaviour
         }
         if(transform.position == dest[target]||speed <= 0)
         {
-            if(target == 1||target == 7|| target >=9 || target <=13)
+            if(target == 1||target == 7|| target >=9 && target <=13)
             {
                 p2Score++;
             }
-            else if (target == 8 || target == 14 || target >= 2 || target <= 6)
+            else if (target == 8 || target == 14 || target >= 2 && target <= 6)
             {
                 p1Score++;
             }
@@ -71,6 +71,7 @@ public class Shuttle : MonoBehaviour
     void Launch()
     {
         timeleft -= Time.deltaTime;
+        target = 0;
         transform.position = dest[0];
         if (timeleft < 0)
         {
