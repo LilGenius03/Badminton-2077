@@ -20,7 +20,6 @@ public class IceBarrier : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shuttle")
         {
-            Shuttle shuttle = GetComponent<Shuttle>();
             shuttle.speed -= slowDown;
             Debug.Log(shuttle.speed);
 

@@ -7,13 +7,15 @@ public class HazardsManager : MonoBehaviour
 {
     public int[] position;
     public GameObject[] hazards;
+    public Shuttle shuttle;
+    public GameObject Shuttle;
     
     
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        shuttle = Shuttle.GetComponent<Shuttle>();
         
     }
 
@@ -21,26 +23,15 @@ public class HazardsManager : MonoBehaviour
     void Update()
     {
 
+           if(shuttle.ShuttleReset == true)
+           {
+             int randomIndux = Random.Range(0, hazards.Length);
+             int randPos = Random.Range(0, position.Length);
+             Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
 
-        
-        
-            int randomIndux = Random.Range(0, hazards.Length);
-            int randPos = Random.Range(0, position.Length);
-            Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
+             Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
+           }
 
-            Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
-
-            
-        
-
-        
-           
-        
-            
-            
-      
-        
-        
         
       
     }
