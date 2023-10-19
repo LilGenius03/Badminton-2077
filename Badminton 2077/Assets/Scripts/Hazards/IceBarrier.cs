@@ -6,12 +6,11 @@ public class IceBarrier : MonoBehaviour
 {
     
     public Shuttle shuttle;
-    public GameObject Shuttle;
     public float slowDown = 0.1f;
 
     private void Start()
     {
-        shuttle = Shuttle.GetComponent<Shuttle>();
+        shuttle = GameObject.Find("Shuttle").GetComponent<Shuttle>();
     }
 
 

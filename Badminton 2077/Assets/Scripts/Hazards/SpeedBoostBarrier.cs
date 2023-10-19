@@ -6,12 +6,12 @@ public class SpeedBoostBarrier : MonoBehaviour
 {
     public Shuttle shuttle;
     public float speedBoost = 0.5f;
-    public GameObject Shuttle;
+    
     // Start is called before the first frame update
 
     private void Start()
     {
-        shuttle = Shuttle.GetComponent<Shuttle>();
+        shuttle = GameObject.Find("Shuttle").GetComponent<Shuttle>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
