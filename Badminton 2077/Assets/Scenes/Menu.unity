@@ -432,14 +432,14 @@ RectTransform:
   m_GameObject: {fileID: 210459855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.075, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.85, y: 5.91375, z: 2.85}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2100091976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93.2, y: -209}
+  m_AnchoredPosition: {x: -440, y: -434}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210459857
@@ -1573,8 +1573,8 @@ Transform:
   m_GameObject: {fileID: 1594659521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0078, y: 0.0002, z: 0}
-  m_LocalScale: {x: 1.1160185, y: 0.9270737, z: 0.1251}
+  m_LocalPosition: {x: -0.0009, y: -0.00008, z: 0}
+  m_LocalScale: {x: 0.92626166, y: 0.92597526, z: 0.1251}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2222,15 +2222,15 @@ RectTransform:
   m_GameObject: {fileID: 1905536550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.075, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.47, y: 5.1252503, z: 2.47}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2100091976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.12828, y: -209}
-  m_SizeDelta: {x: 203.101, y: 30}
+  m_AnchoredPosition: {x: 423.77502, y: -437.239}
+  m_SizeDelta: {x: 219.477, y: 32.819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905536552
 MonoBehaviour:
@@ -2674,10 +2674,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
