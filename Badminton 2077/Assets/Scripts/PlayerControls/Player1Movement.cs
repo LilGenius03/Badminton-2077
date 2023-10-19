@@ -39,9 +39,9 @@ public class Player1Movement : MonoBehaviour
     {
         bool w = Input.GetKeyDown(KeyCode.W);
         bool s = Input.GetKeyDown(KeyCode.S);
-        bool a = Input.GetKeyDown(KeyCode.A);
-        bool d = Input.GetKeyDown(KeyCode.D);
-        bool power = Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D);
+        bool a = Input.GetKeyDown(KeyCode.G);
+        bool d = Input.GetKeyDown(KeyCode.F);
+        bool power = Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.G);
 
         if (w)
         {

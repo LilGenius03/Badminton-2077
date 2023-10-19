@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 6336484373304014166}
   m_Layer: 0
   m_Name: SpeedBoost Barrier
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6858524509793765606
 Transform:
   m_ObjectHideFlags: 0
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7ef05afb0f49841806ec691a066e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shuttle: {fileID: 0}
+  shuttle: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
   speedBoost: 2
-  Shuttle: {fileID: 0}
+  Shuttle: {fileID: 8615557911825341650, guid: dd530420baa218c428404ca5551280e7, type: 3}
 --- !u!61 &6336484373304014166
 BoxCollider2D:
   m_ObjectHideFlags: 0

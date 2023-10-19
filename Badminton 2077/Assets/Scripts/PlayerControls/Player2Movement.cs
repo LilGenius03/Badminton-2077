@@ -37,9 +37,9 @@ public class Player2Movement : MonoBehaviour
     {
         bool uparrow = Input.GetKeyDown(KeyCode.UpArrow);
         bool downarrow = Input.GetKeyDown(KeyCode.DownArrow);
-        bool rightarrow = Input.GetKeyDown(KeyCode.RightArrow);
-        bool leftarrow = Input.GetKeyDown (KeyCode.LeftArrow);
-        bool power = Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow);
+        bool rightarrow = Input.GetKeyDown(KeyCode.L);
+        bool leftarrow = Input.GetKeyDown (KeyCode.K);
+        bool power = Input.GetKey(KeyCode.L) && Input.GetKey(KeyCode.K);
 
 
         if (uparrow)

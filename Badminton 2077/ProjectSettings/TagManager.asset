@@ -9,6 +9,7 @@ TagManager:
   - Shuttle
   - Orange Portal
   - Blue Portal
+  - Hazard
   layers:
   - Default
   - TransparentFX

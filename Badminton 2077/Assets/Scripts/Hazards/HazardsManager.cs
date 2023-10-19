@@ -7,36 +7,46 @@ public class HazardsManager : MonoBehaviour
 {
     public int[] position;
     public GameObject[] hazards;
-    public Shuttle shuttle;
-    public GameObject Shuttle;
-    
-    
-    
-    // Start is called before the first frame update
-    void Start()
+    //public GameObject PortalParent;
+    public float timeleft = 10f;
+    public float ResetTime = 5f;
+
+
+    private void Start()
     {
-        shuttle = Shuttle.GetComponent<Shuttle>();
-        
+        //PortalParent = this.transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-           if(shuttle.ShuttleReset == true && shuttle.speed > 0)
-           {
-             int randomIndux = Random.Range(0, hazards.Length);
-             int randPos = Random.Range(0, position.Length);
-             Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
-
-             Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
-           }
-
-           
-
-
+        timeleft -= Time.deltaTime;
 
         
+
+        if (timeleft < 0)
+        {
+            GameObject nearestHazard = GameObject.FindWithTag("Hazard");
+
+            if (nearestHazard != null)
+            {
+                Destroy(nearestHazard);
+            }
+
+            timeleft = ResetTime;
+
+            int randomIndux = Random.Range(0, hazards.Length);
+            int randPos = Random.Range(0, position.Length);
+            Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
+
+            Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
+
+            
+
+            
+        }
+             
+
       
     }
 }

@@ -50,12 +50,15 @@ public class Shuttle : MonoBehaviour
             if(target == 1||target == 7|| target >=9 && target <=13)
             {
                 p2Score++;
+                ShuttleScored = true;
             }
             else if (target == 8 || target == 14 || target >= 2 && target <= 6)
             {
                 p1Score++;
+                ShuttleScored = true;
             }
             ShuttleReset = true;
+            
 
         }
 
