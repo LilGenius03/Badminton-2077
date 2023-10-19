@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shuttle: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
   Shuttle: {fileID: 8615557911825341650, guid: dd530420baa218c428404ca5551280e7, type: 3}
-  slowDown: 0.25
+  slowDown: 1
 --- !u!61 &8684754489037316098
 BoxCollider2D:
   m_ObjectHideFlags: 0
