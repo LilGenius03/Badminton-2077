@@ -9,13 +9,14 @@ public class Hit : MonoBehaviour
     public float speed;
     public int power;
     public bool change;
-
+    public AudioSource hit;
 
     void OnTriggerEnter2D(Collider2D col)
     {
         //Debug.Log("hi");
         if (col.CompareTag("Shuttle"))
         {
+            hit.Play();
             /*Debug.Log((1 * hand));
             Debug.Log((7 * player) + (1 * hand));
             Debug.Log(col.GetComponent<Shuttle>().target + (7 * player) + (1 * hand));*/

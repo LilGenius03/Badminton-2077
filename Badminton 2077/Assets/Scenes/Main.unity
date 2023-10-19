@@ -372,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 67559854}
-  - component: {fileID: 67559853}
+  - component: {fileID: 67559855}
   m_Layer: 0
   m_Name: HitSound
   m_TagString: Untagged
@@ -380,7 +380,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &67559853
+--- !u!4 &67559854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67559852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.10542303, y: -0.21511935, z: -0.09457749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &67559855
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,7 +405,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1ea743bb58b4ba4d8f3abe6030ded60, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c00f40f2742a9544cb10e9a08a9d36cf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -476,21 +491,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &67559854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67559852}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.10542303, y: -0.21511935, z: -0.09457749}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95106703
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,6 +768,7 @@ MonoBehaviour:
   speed: 10
   power: 1
   change: 0
+  hit: {fileID: 67559855}
 --- !u!50 &115196522
 Rigidbody2D:
   serializedVersion: 4
@@ -1211,7 +1212,6 @@ MonoBehaviour:
   Racket1: {fileID: 1667823853}
   Racket2: {fileID: 1248735147}
   player2Sprite: {fileID: 583625076}
-  hit: {fileID: 67559853}
   PowershotTierOne: {fileID: 1687913962}
   PowershotTierTwo: {fileID: 95106704}
   SuperMeterhalfWay: {fileID: 1110420691}
@@ -1767,6 +1767,7 @@ MonoBehaviour:
   speed: 10
   power: 1
   change: 0
+  hit: {fileID: 67559855}
 --- !u!1 &1047999290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6958,6 +6959,7 @@ MonoBehaviour:
   speed: 10
   power: 1
   change: 0
+  hit: {fileID: 67559855}
 --- !u!1 &1344901610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5732715637027196189, guid: ea8d27fb03ea89348b50dfa3d1ba033c, type: 3}
@@ -7127,6 +7129,7 @@ MonoBehaviour:
   speed: 10
   power: 1
   change: 0
+  hit: {fileID: 67559855}
 --- !u!1 &1687913961
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,7 +7716,6 @@ MonoBehaviour:
   anim: {fileID: 1856668731}
   gridSize: 1
   Supermeter: {fileID: 1012310530029562296}
-  hit: {fileID: 67559853}
   PowershotTierOne: {fileID: 1687913962}
   PowershotTierTwo: {fileID: 95106704}
   SuperMeterhalfWay: {fileID: 2122327645}

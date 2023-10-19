@@ -14,7 +14,7 @@ public class Player1Movement : MonoBehaviour
     private bool Racket1On = true;
     private bool Racket2On = false;
     public SuperMeter Supermeter;
-    public AudioSource hit;
+    //public AudioSource hit;
     public AudioSource PowershotTierOne;
     public AudioSource PowershotTierTwo;
     public ParticleSystem SuperMeterhalfWay;
@@ -63,7 +63,7 @@ public class Player1Movement : MonoBehaviour
             {
                 anim.SetTrigger("SwingBottom");
             }
-            hit.Play();
+            //hit.Play();
         }
         transform.Translate(x, y, 0);
         x = 0;
@@ -80,7 +80,7 @@ public class Player1Movement : MonoBehaviour
             {
                 MeterIncrease(-25);
                 PowershotTierOne.Play();
-                hit.Stop();
+                //hit.Stop();
                 if(Racket1On == true && Racket2On != true)
                 {
                     Racket1.GetComponent<Hit>().power = 2;
@@ -95,7 +95,7 @@ public class Player1Movement : MonoBehaviour
             {
                 MeterIncrease(-currentMeter);
                 PowershotTierTwo.Play();
-                hit.Stop();
+                //hit.Stop();
             }
         }
 

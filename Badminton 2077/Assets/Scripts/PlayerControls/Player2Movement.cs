@@ -19,7 +19,7 @@ public class Player2Movement : MonoBehaviour
     public GameObject Racket1;
     public GameObject Racket2;
     public GameObject player2Sprite;
-    public AudioSource hit;
+    //public AudioSource hit;
     public AudioSource PowershotTierOne;
     public AudioSource PowershotTierTwo;
     public ParticleSystem SuperMeterhalfWay;
@@ -65,7 +65,7 @@ public class Player2Movement : MonoBehaviour
             {
                 anim.SetTrigger("SwingBottom");
             }
-            hit.Play();
+            //hit.Play();
         }
 
         if (currentMeter == 25)
@@ -96,14 +96,14 @@ public class Player2Movement : MonoBehaviour
             {
                 MeterIncrease(-25);
                 PowershotTierOne.Play();
-                hit.Stop();
+                //hit.Stop();
             }
 
             else if(currentMeter >= 50)
             {
                 MeterIncrease(-currentMeter);
                 PowershotTierTwo.Play();
-                hit.Stop();
+                //hit.Stop();
             }
         }
 
