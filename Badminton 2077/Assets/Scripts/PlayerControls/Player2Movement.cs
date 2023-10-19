@@ -37,7 +37,8 @@ public class Player2Movement : MonoBehaviour
     {
         bool uparrow = Input.GetKeyDown(KeyCode.UpArrow);
         bool downarrow = Input.GetKeyDown(KeyCode.DownArrow);
-        bool rightarrow = Input .GetKeyDown(KeyCode.RightArrow);
+        bool rightarrow = Input.GetKeyDown(KeyCode.RightArrow);
+        bool leftarrow = Input.GetKeyDown (KeyCode.LeftArrow);
         bool power = Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow);
 
 
@@ -55,17 +56,34 @@ public class Player2Movement : MonoBehaviour
         x = 0;
         y = 0;
 
-        if(rightarrow)
+        if(rightarrow && power == false)
         {
-            if (Racket1On == true && Racket2On != true)
+            /*if (Racket1On == true && Racket2On != true)
             {
                 anim.SetTrigger("SwingTop");
             }
             else if (Racket1On != true && Racket2On == true)
             {
                 anim.SetTrigger("SwingBottom");
-            }
-            //hit.Play();
+            }*/
+            Racket1On = true;
+            Racket2On = false;
+
+            Racket1.SetActive(true);
+            Racket2.SetActive(false);
+
+            anim.SetTrigger("SwingTop");
+        }
+
+        if (leftarrow && power == false)
+        {
+            Racket1On = false;
+            Racket2On = true;
+
+            Racket1.SetActive(false);
+            Racket2.SetActive(true);
+
+            anim.SetTrigger("SwingBottom");
         }
 
         if (currentMeter == 25)
@@ -73,7 +91,7 @@ public class Player2Movement : MonoBehaviour
             SuperMeterhalfWay.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true && power == false)
+        /*if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true && power == false)
         {
             Racket1On = false;
             Racket2On = true;
@@ -88,7 +106,7 @@ public class Player2Movement : MonoBehaviour
 
             Racket2.SetActive(false);
             Racket1.SetActive(true);
-        }
+        }*/
 
         if(power)
         {
@@ -96,22 +114,36 @@ public class Player2Movement : MonoBehaviour
             {
                 MeterIncrease(-25);
                 PowershotTierOne.Play();
-                //hit.Stop();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                }
             }
 
             else if(currentMeter >= 50)
             {
                 MeterIncrease(-currentMeter);
                 PowershotTierTwo.Play();
-                //hit.Stop();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                }
             }
         }
 
-        else if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow) && currentMeter == 50)
+        /*else if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow) && currentMeter == 50)
         {
             currentMeter = 0;
             
-        }
+        }*/
 
         
     }
