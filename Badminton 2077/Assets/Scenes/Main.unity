@@ -32339,6 +32339,10 @@ PrefabInstance:
       propertyPath: ShuttleReset
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: WaitTillLaunch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3875965754289231448, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

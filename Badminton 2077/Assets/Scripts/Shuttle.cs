@@ -4,6 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 public class Shuttle : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class Shuttle : MonoBehaviour
     public float decel;
     public float rotationSpeed = 1f;
     public float rotationTime = 2f;
-    public float WaitForRotation = 3f;
     public float timeleft;
+    public float WaitTillLaunch = 1f;
     public bool ShuttleReset;
     public bool ShuttleScored;
     public Vector3[] dest = new Vector3[15];
@@ -39,7 +40,7 @@ public class Shuttle : MonoBehaviour
         }
         if (ShuttleReset)
         {
-            Launch();
+            StartCoroutine(Launch());
         }
         else if(!ShuttleReset)
         {
@@ -76,27 +77,38 @@ public class Shuttle : MonoBehaviour
         }
     }
 
-    void Launch()
+    IEnumerator Launch()
     {
         timeleft -= Time.deltaTime;
         target = 0;
         transform.position = dest[0];
         if (timeleft < 0)
         {
-            //ShuttleHit.Stop();
             timeleft = rotationTime;
             ShuttleReset = false;
             speed = 10;
+            //ShuttleHit.Stop();
+
+            /*while(timeleft > 0)
+            {
+                gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
+            }*/
+
+            //yield return new WaitForSeconds(WaitTillLaunch);
+
             target = (Random.Range(1, 14));
-            if(target == 7|| target == 8)
+            if (target == 7|| target == 8)
             {
                 target -= 2;
             }
+
+            
         }
 
         if (timeleft > 0)
-        {
+        {           
             gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
+            yield return new WaitForSeconds(WaitTillLaunch);
         }
     }
 
