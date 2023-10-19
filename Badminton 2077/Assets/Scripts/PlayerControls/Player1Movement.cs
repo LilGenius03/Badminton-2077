@@ -99,7 +99,7 @@ public class Player1Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && Racket1On == true)
+        if (Input.GetKeyDown(KeyCode.D) && Racket1On == true && power == false)
         {
             Racket1On = false;
             Racket2On = true;
@@ -107,7 +107,7 @@ public class Player1Movement : MonoBehaviour
             Racket2.SetActive(true);
         }
 
-        else if(Input.GetKeyDown(KeyCode.D) && Racket2On == true)
+        else if(Input.GetKeyDown(KeyCode.D) && Racket2On == true && power == false)
         {
             Racket2On = false;
             Racket1On = true;

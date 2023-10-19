@@ -9,8 +9,8 @@ public class Player2Movement : MonoBehaviour
     public float gridSize = 1f;
     private float x, y;
 
-    private bool Racket1On = true;
-    private bool Racket2On = false;
+    private bool Racket1On = false;
+    private bool Racket2On = true;
     public int MinSupeMeter = 0;
     public int currentMeter;
 
@@ -73,7 +73,7 @@ public class Player2Movement : MonoBehaviour
             SuperMeterhalfWay.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true && power == false)
         {
             Racket1On = false;
             Racket2On = true;
@@ -81,7 +81,7 @@ public class Player2Movement : MonoBehaviour
             Racket2.SetActive(true);
         }
 
-        else if(Input.GetKeyDown(KeyCode.LeftArrow) && Racket2On == true)
+        else if(Input.GetKeyDown(KeyCode.LeftArrow) && Racket2On == true && power == false)
         {
             Racket2On = false;
             Racket1On = true;
