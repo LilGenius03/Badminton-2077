@@ -10,12 +10,14 @@ public class Hit : MonoBehaviour
     public int power;
     public bool change;
     public AudioSource hit;
+    public ParticleSystem PlayerHit;
 
     void OnTriggerEnter2D(Collider2D col)
     {
         //Debug.Log("hi");
         if (col.CompareTag("Shuttle"))
         {
+            PlayerHit.Play();
             hit.Play();
             /*Debug.Log((1 * hand));
             Debug.Log((7 * player) + (1 * hand));

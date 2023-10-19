@@ -17,7 +17,8 @@ public class Shuttle : MonoBehaviour
     public bool ShuttleScored;
     public Vector3[] dest = new Vector3[15];
     public bool change = false;
-
+    //public ParticleSystem ShuttleHit;
+ 
     public int target = 0;
 
     int p1Score = 0;
@@ -65,6 +66,7 @@ public class Shuttle : MonoBehaviour
     {
         if (speed > 0 && transform.position != dest[target])
         {
+            //ShuttleHit.Play();
             speed -= decel;
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dest[target], step);
@@ -78,6 +80,7 @@ public class Shuttle : MonoBehaviour
         transform.position = dest[0];
         if (timeleft < 0)
         {
+            //ShuttleHit.Stop();
             timeleft = rotationTime;
             ShuttleReset = false;
             speed = 10;
