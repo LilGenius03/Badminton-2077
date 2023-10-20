@@ -26602,6 +26602,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
+      propertyPath: PortalParent
+      value: 
+      objectReference: {fileID: 8303040417206446597, guid: 85ea81611bd982042800cab76288b99c, type: 3}
+    - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: scoreboardP1
       value: 
       objectReference: {fileID: 0}
@@ -26620,11 +26624,11 @@ PrefabInstance:
     - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: hazards.Array.data[0]
       value: 
-      objectReference: {fileID: 8823460320647191806, guid: 2f8007a1ea551244485389e033f8a6cc, type: 3}
+      objectReference: {fileID: 2837009621132436579, guid: 2f8007a1ea551244485389e033f8a6cc, type: 3}
     - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: hazards.Array.data[1]
       value: 
-      objectReference: {fileID: 5732715637027196189, guid: ea8d27fb03ea89348b50dfa3d1ba033c, type: 3}
+      objectReference: {fileID: 1744850788377694661, guid: ea8d27fb03ea89348b50dfa3d1ba033c, type: 3}
     - target: {fileID: 8377802970943900400, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.21734375

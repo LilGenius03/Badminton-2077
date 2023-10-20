@@ -7,14 +7,14 @@ public class HazardsManager : MonoBehaviour
 {
     public int[] position;
     public GameObject[] hazards;
-    //public GameObject PortalParent;
+    public GameObject PortalParent;
     public float timeleft = 10f;
     public float ResetTime = 5f;
 
 
     private void Start()
     {
-        //PortalParent = this.transform.GetChild(1).gameObject;
+        PortalParent = this.transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
