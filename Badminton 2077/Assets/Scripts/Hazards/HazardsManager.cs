@@ -7,15 +7,10 @@ public class HazardsManager : MonoBehaviour
 {
     public int[] position;
     public GameObject[] hazards;
-    public GameObject PortalParent;
+    public GameObject PortalParents;
     public float timeleft = 10f;
     public float ResetTime = 5f;
 
-
-    private void Start()
-    {
-        PortalParent = this.transform.GetChild(1).gameObject;
-    }
 
     // Update is called once per frame
     void Update()
@@ -40,8 +35,6 @@ public class HazardsManager : MonoBehaviour
             Vector2 randomSpawnPos = new Vector2(0, position[randPos]);
 
             Instantiate(hazards[randomIndux], randomSpawnPos, Quaternion.identity);
-
-            
 
             
         }
