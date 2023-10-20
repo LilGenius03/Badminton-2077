@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 
 public class Shuttle : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class Shuttle : MonoBehaviour
     //public ParticleSystem ShuttleHit;
  
     public int target = 0;
+
+    public GameObject point;
+    float wait = 0.2f;
 
     int p1Score = 0;
     int p2Score = 0;
@@ -40,10 +44,12 @@ public class Shuttle : MonoBehaviour
         }
         if (ShuttleReset)
         {
-            StartCoroutine(Launch());
+            point.SetActive(true);
+            Launch();
         }
         else if(!ShuttleReset)
         {
+            point.SetActive(false);
             Move();
         }
         if(transform.position == dest[target]||speed <= 0)
@@ -68,21 +74,39 @@ public class Shuttle : MonoBehaviour
 
     void Move()
     {
-        if (speed > 0 && transform.position != dest[target])
+        if (transform.position != dest[target])
         {
             //ShuttleHit.Play();
-            speed -= decel;
+            if(speed > 0.5)
+            {
+                speed -= decel;
+            }
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dest[target], step);
         }
     }
 
-    IEnumerator Launch()
+    void Launch()
     {
         timeleft -= Time.deltaTime;
-        target = 0;
         transform.position = dest[0];
-        if (timeleft < 0)
+
+        if (timeleft > 0.5)
+        {
+            if (wait <= 0)
+            {
+                do
+                {
+                    target = (Random.Range(2, 14));
+                }
+                while (target == 7 || target == 8);
+                point.transform.position = dest[target];
+                gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
+                wait = 0.2f;
+            }
+            wait -= Time.deltaTime;
+        }
+        else if (timeleft < 0)
         {
             timeleft = rotationTime;
             ShuttleReset = false;
@@ -96,20 +120,9 @@ public class Shuttle : MonoBehaviour
 
             //yield return new WaitForSeconds(WaitTillLaunch);
 
-            target = (Random.Range(1, 14));
-            if (target == 7|| target == 8)
-            {
-                target -= 2;
-            }
-
-            
         }
 
-        if (timeleft > 0)
-        {           
-            gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
-            yield return new WaitForSeconds(WaitTillLaunch);
-        }
+        
     }
 
     void EndGame()
