@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -54,8 +55,8 @@ public class Player1Movement : MonoBehaviour
             y = -gridSize;
             MeterIncrease(1);
 
-        }
-
+        }       
+        
         if (a && power == false)
         {
             /*if (Racket1On == true && Racket2On != true)
@@ -94,38 +95,7 @@ public class Player1Movement : MonoBehaviour
             SuperMeterhalfWay.Play();
         }
 
-        if (power)
-        {
-            if (currentMeter >= 25 && currentMeter <= 49)
-            {
-                MeterIncrease(-25);
-                PowershotTierOne.Play();
-                if(Racket1On == true && Racket2On != true)
-                {
-                    anim.SetTrigger("SwingTop");
-                    Racket1.GetComponent<Hit>().power = 2;
-                }
-                else if (Racket1On != true && Racket2On == true)
-                {
-                    anim.SetTrigger("SwingBottom");
-                    Racket2.GetComponent<Hit>().power = 2;
-                }
-            }
-
-            else if (currentMeter >= 50)
-            {
-                MeterIncrease(-currentMeter);
-                PowershotTierTwo.Play();
-                if (Racket1On == true && Racket2On != true)
-                {
-                    anim.SetTrigger("SwingTop");
-                }
-                else if (Racket1On != true && Racket2On == true)
-                {
-                    anim.SetTrigger("SwingBottom");
-                }
-            }
-        }
+        SuperMeter();
 
         /*if (Input.GetKeyDown(KeyCode.D) && Racket1On == true && power == false)
         {
@@ -161,5 +131,43 @@ public class Player1Movement : MonoBehaviour
     {
         currentMeter += increase;
         Supermeter.SetMeter(currentMeter);
+    }
+
+    public void SuperMeter()
+    {
+        bool power = Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.G);
+
+        if (power)
+        {
+            if (currentMeter >= 25 && currentMeter <= 49)
+            {
+                MeterIncrease(-25);
+                PowershotTierOne.Play();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                    Racket1.GetComponent<Hit>().power = 2;
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                    Racket2.GetComponent<Hit>().power = 2;
+                }
+            }
+
+            else if (currentMeter >= 50)
+            {
+                MeterIncrease(-currentMeter);
+                PowershotTierTwo.Play();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                }
+            }
+        }
     }
 }
