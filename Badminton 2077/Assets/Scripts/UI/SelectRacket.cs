@@ -24,6 +24,8 @@ public class SelectRacket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        RacketPicker.p1Select = 1;
+        RacketPicker.p2Select = 1;
         Rocket1Chosen = false;
         Power1Chosen = false;
         ZigZag1Chosen = false;

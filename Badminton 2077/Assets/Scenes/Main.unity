@@ -11689,6 +11689,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1012310530029562296}
     - target: {fileID: 8002926283576575869, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
+      propertyPath: racketType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002926283576575869, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
       propertyPath: PowershotTierOne
       value: 
       objectReference: {fileID: 1687913962}
