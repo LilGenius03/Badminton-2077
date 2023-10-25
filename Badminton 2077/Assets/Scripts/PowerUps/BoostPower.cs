@@ -49,12 +49,12 @@ public class BoostPower : MonoBehaviour
     {
         player2 = Player2.GetComponent<Player2Movement>();
 
-        if (player1.currentMeter >= 25 && player1.currentMeter <= 49)
+        if (player2.currentMeter >= 25 && player2.currentMeter <= 49)
         {
             hit.power += 5;
         }
 
-        else if (player1.currentMeter >= 50)
+        else if (player2.currentMeter >= 50)
         {
             hit.power += 8;
         }
