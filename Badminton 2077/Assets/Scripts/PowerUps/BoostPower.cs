@@ -14,7 +14,7 @@ public class BoostPower : MonoBehaviour
 
     private void Start()
     {
-        hit = GetComponent<Hit>();
+        hit = Player1.GetComponent<Hit>();
     }
 
     private void Update()
