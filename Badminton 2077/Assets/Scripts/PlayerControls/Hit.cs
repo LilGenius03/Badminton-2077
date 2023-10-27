@@ -11,6 +11,12 @@ public class Hit : MonoBehaviour
     public bool change;
     public AudioSource hit;
     public ParticleSystem PlayerHit;
+    public int powerUp;
+
+    void Start()
+    {
+        powerUp = RacketPicker.p1Select;
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -24,6 +30,48 @@ public class Hit : MonoBehaviour
             power = 1;
             speed = 10;
             change = false;
+        }
+    }
+
+    public void PowerUp()
+    {
+        switch(powerUp)
+        {
+            case 0:
+                power = 2;
+                break;
+            case 1:
+                speed = 15;
+                break;
+            case 2:
+                change = true;
+                break;
+            default:
+                power = 1;
+                speed = 10;
+                change=false;
+                break;
+        }
+    }
+
+    public void Power2()
+    {
+        switch (powerUp)
+        {
+            case 0:
+                power = 3;
+                break;
+            case 1:
+                speed = 20;
+                break;
+            case 2:
+                change = true;
+                break;
+            default:
+                power = 1;
+                speed = 10;
+                change = false;
+                break;
         }
     }
 }

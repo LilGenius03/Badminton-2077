@@ -148,11 +148,10 @@ public class Player1Movement : MonoBehaviour
                 if (Racket1On == true && Racket2On != true)
                 {
                     anim.SetTrigger("SwingTop");
-                    if(RacketPicker.p1Select == 1)
-                    {
-                        Racket1.GetComponent<Hit>().power = 2;
-                    }
-                    
+                    Racket1.GetComponent<Hit>().PowerUp();
+                    //Hit sn = Racket1.GetComponent<Hit>();
+                    //sn.PowerUp();
+
                 }
                 else if (Racket1On != true && Racket2On == true)
                 {

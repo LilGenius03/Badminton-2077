@@ -42,6 +42,14 @@ public class Shuttle : MonoBehaviour
             target++;
             change = false;
         }
+        if(target >= 16)
+        {
+            target = 15;
+        }
+        else if(target <= 0)
+        {
+            target = 1;
+        }
         if (ShuttleReset)
         {
             point.SetActive(true);
@@ -65,8 +73,6 @@ public class Shuttle : MonoBehaviour
                 ShuttleScored = true;
             }
             ShuttleReset = true;
-            
-
         }
 
         EndGame();
@@ -77,7 +83,7 @@ public class Shuttle : MonoBehaviour
         if (transform.position != dest[target])
         {
             //ShuttleHit.Play();
-            if(speed > 0.5)
+            if(speed > 1)
             {
                 speed -= decel;
             }
