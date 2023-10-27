@@ -168,7 +168,7 @@ public class Player2Movement : MonoBehaviour
     }
     public void SuperMeter()
     {
-        bool power = Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.G);
+        bool power = Input.GetKey(KeyCode.K) && Input.GetKey(KeyCode.L);
 
         if (power)
         {
