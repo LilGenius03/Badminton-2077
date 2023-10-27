@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Player1Movement : MonoBehaviour
 {
-    public int racketType;
+    //public int racketType;
     public Animator anim;
     public  float gridSize = 1f;
     private float x, y;
@@ -31,7 +31,7 @@ public class Player1Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        racketType = RacketPicker.p1Select;
+        //racketType = RacketPicker.p1Select;
         Racket1.SetActive(true);
         Racket2.SetActive(false);
         Supermeter.SetMeter(MinSupeMeter);
@@ -156,10 +156,7 @@ public class Player1Movement : MonoBehaviour
                 else if (Racket1On != true && Racket2On == true)
                 {
                     anim.SetTrigger("SwingBottom");
-                    if (RacketPicker.p1Select == 1)
-                    {
-                        Racket2.GetComponent<Hit>().power = 2;
-                    }
+                    Racket2.GetComponent<Hit>().PowerUp();
                 }
             }
 
@@ -170,10 +167,12 @@ public class Player1Movement : MonoBehaviour
                 if (Racket1On == true && Racket2On != true)
                 {
                     anim.SetTrigger("SwingTop");
+                    Racket1.GetComponent<Hit>().Power2();
                 }
                 else if (Racket1On != true && Racket2On == true)
                 {
                     anim.SetTrigger("SwingBottom");
+                    Racket2.GetComponent<Hit>().Power2();
                 }
             }
         }

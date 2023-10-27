@@ -91,6 +91,8 @@ public class Player2Movement : MonoBehaviour
             SuperMeterhalfWay.Play();
         }
 
+        SuperMeter();
+
         /*if (Input.GetKeyDown(KeyCode.LeftArrow) && Racket1On == true && power == false)
         {
             Racket1On = false;
@@ -108,7 +110,7 @@ public class Player2Movement : MonoBehaviour
             Racket1.SetActive(true);
         }*/
 
-        if(power)
+        /*if(power)
         {
             if(currentMeter >= 25 && currentMeter <= 49)
             {
@@ -145,7 +147,7 @@ public class Player2Movement : MonoBehaviour
             
         }*/
 
-        
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -163,5 +165,47 @@ public class Player2Movement : MonoBehaviour
     {
         currentMeter += increase;
         Supermeter.SetMeter(currentMeter);
+    }
+    public void SuperMeter()
+    {
+        bool power = Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.G);
+
+        if (power)
+        {
+            if (currentMeter >= 25 && currentMeter <= 49)
+            {
+                MeterIncrease(-25);
+                PowershotTierOne.Play();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                    Racket1.GetComponent<Hit>().PowerUp();
+                    //Hit sn = Racket1.GetComponent<Hit>();
+                    //sn.PowerUp();
+
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                    Racket2.GetComponent<Hit>().PowerUp();
+                }
+            }
+
+            else if (currentMeter >= 50)
+            {
+                MeterIncrease(-currentMeter);
+                PowershotTierTwo.Play();
+                if (Racket1On == true && Racket2On != true)
+                {
+                    anim.SetTrigger("SwingTop");
+                    Racket1.GetComponent<Hit>().Power2();
+                }
+                else if (Racket1On != true && Racket2On == true)
+                {
+                    anim.SetTrigger("SwingBottom");
+                    Racket2.GetComponent<Hit>().Power2();
+                }
+            }
+        }
     }
 }

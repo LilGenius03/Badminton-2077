@@ -27,6 +27,10 @@ public class Hit : MonoBehaviour
             col.GetComponent<Shuttle>().target = col.GetComponent<Shuttle>().target + (7 * player) + (power * hand);
             col.GetComponent<Shuttle>().speed = speed;
             col.GetComponent<Shuttle>().change = change;
+            if(change)
+            {
+                col.GetComponent<Shuttle>().upDown = hand;
+            }
             power = 1;
             speed = 10;
             change = false;

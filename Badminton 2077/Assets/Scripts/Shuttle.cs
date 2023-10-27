@@ -19,6 +19,7 @@ public class Shuttle : MonoBehaviour
     public bool ShuttleScored;
     public Vector3[] dest = new Vector3[15];
     public bool change = false;
+    public int upDown = 0;
     //public ParticleSystem ShuttleHit;
  
     public int target = 0;
@@ -39,7 +40,7 @@ public class Shuttle : MonoBehaviour
 
         if (change && transform.position.x <= 0.1&& transform.position.x >= -0.1)
         {
-            target++;
+            target += upDown;
             change = false;
         }
         if(target >= 16)

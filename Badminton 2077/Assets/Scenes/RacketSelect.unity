@@ -417,7 +417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193974909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -514,11 +514,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193974909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 741be38cb189fe8428221861bd9d1e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerSelectText: 0
   ShowText: {fileID: 193974911}
 --- !u!1 &213264728
 GameObject:
@@ -667,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c04cd7e5dd63a94486c6de481eeaa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RocketSelectText: 0
   ShowText: {fileID: 213264730}
 --- !u!1 &570542164
 GameObject:
@@ -1125,6 +1127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b86b0bde225f4e45b8b588058b55746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ZigZagSelectText: 0
   ShowText: {fileID: 781408209}
 --- !u!1 &886239231
 GameObject:
@@ -1610,12 +1613,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188269506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27ab109fdbe520d459aeef3c4555380b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 1188269508}
+  PowerSelect: 0
 --- !u!1 &1192188053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1490215191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1977,6 +1981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 1490215192}
+  RocketSelect: 0
 --- !u!1 &1609941023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +2000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1609941024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2125,6 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b86b0bde225f4e45b8b588058b55746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ZigZagSelectText: 0
   ShowText: {fileID: 1609941025}
 --- !u!1 &1647627856
 GameObject:
@@ -2268,11 +2274,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647627856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 741be38cb189fe8428221861bd9d1e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerSelectText: 0
   ShowText: {fileID: 1647627858}
 --- !u!1 &1656888589
 GameObject:
@@ -2426,7 +2433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1699980194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2497,6 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 1699980195}
+  ZigZagSelect: 0
 --- !u!1 &1795583924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,15 +2699,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096dd9777acf92d49a17cfa257e17cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rocket1Chosen: 0
-  Power1Chosen: 0
-  ZigZag1Chosen: 0
-  Rocket2Chosen: 0
-  Power2Chosen: 0
-  ZigZag2Chosen: 0
-  RocketSelect: 0
-  PowerSelect: 0
-  ZigZagSelect: 0
+  racket:
+  - {fileID: 21300000, guid: 4eee271ac7b5a124c9a66d8ee7c79310, type: 3}
+  - {fileID: 21300000, guid: f1e5c1cc7dff2ec4289de49e061a03dc, type: 3}
+  - {fileID: 21300000, guid: e00b6b01983dbde4e9453e373993b4fc, type: 3}
+  shown: {fileID: 1188269506}
   Options: 0
 --- !u!4 &1925547222
 Transform:
@@ -2734,7 +2738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971558970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2864,6 +2868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c04cd7e5dd63a94486c6de481eeaa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RocketSelectText: 0
   ShowText: {fileID: 1971558971}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

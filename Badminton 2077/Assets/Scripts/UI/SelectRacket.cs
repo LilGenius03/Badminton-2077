@@ -4,39 +4,33 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class SelectRacket : MonoBehaviour
 {
-    public bool Rocket1Chosen;
+    /*public bool Rocket1Chosen;
     public bool Power1Chosen;
     public bool ZigZag1Chosen;
 
     public bool Rocket2Chosen;
     public bool Power2Chosen;
-    public bool ZigZag2Chosen;
+    public bool ZigZag2Chosen;*/
 
-    public bool RocketSelect;
-    public bool PowerSelect;
-    public bool ZigZagSelect;
+    public Sprite[] racket = new Sprite[3];
+    public GameObject shown;
+    bool p1Ready;
+    bool p2Ready;
 
     public int Options;
 
     // Start is called before the first frame update
     void Start()
     {
-        RacketPicker.p1Select = 1;
-        RacketPicker.p2Select = 1;
-        Rocket1Chosen = false;
-        Power1Chosen = false;
-        ZigZag1Chosen = false;
-
-        Rocket2Chosen = false;
-        Power2Chosen = false;
-        ZigZag2Chosen = false;
-
-        RocketSelect = false;
-        PowerSelect = false;
-        ZigZagSelect = false;
+        p1Ready = false;
+        p2Ready = false;
+        RacketPicker.p1Select = 0;
+        RacketPicker.p2Select = 0;
 
         Options = 0;
     }
@@ -63,66 +57,21 @@ public class SelectRacket : MonoBehaviour
         {
             Options = 2;
         }
-
-        if (Input.GetKeyDown(KeyCode.W))
+        shown.GetComponent<Image>().sprite = racket[Options];
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            if (PowerSelect == true & !Power1Chosen & !Rocket1Chosen & !ZigZag1Chosen)
-            {
-                Power1Chosen = true;
-            }
-
-            if (RocketSelect == true & !Power1Chosen & !Rocket1Chosen & !ZigZag1Chosen)
-            {
-                //Rocket1Chosen = true;
-            }
-
-            if (ZigZagSelect == true & !Power1Chosen & !Rocket1Chosen & !ZigZag1Chosen)
-            {
-                //ZigZag1Chosen = true;
-            }
+            p1Ready = true;
+        }
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            p2Ready = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        if (p1Ready == true & p2Ready == true)
         {
-            if (PowerSelect == true & !Power2Chosen & !Rocket2Chosen & !ZigZag2Chosen)
-            {
-                Power2Chosen = true;
-            }
-
-            if (RocketSelect == true & !Power2Chosen & !Rocket2Chosen & !ZigZag2Chosen)
-            {
-                //Rocket2Chosen = true;
-            }
-
-            if (ZigZagSelect == true & !Power2Chosen & !Rocket2Chosen & !ZigZag2Chosen)
-            {
-                //ZigZag2Chosen = true;
-            }
-        }
-
-        if (Options == 0)
-        {
-            PowerSelect = true;
-            RocketSelect = false;
-            ZigZagSelect = false;
-        }
-
-        if (Options == 1)
-        {
-            PowerSelect = false;
-            RocketSelect = true;
-            ZigZagSelect = false;
-        }
-
-        if (Options == 2)
-        {
-            PowerSelect = false;
-            RocketSelect = false;
-            ZigZagSelect = true;
-        }
-
-        if (Power1Chosen == true & Power2Chosen == true)
-        {
+            RacketPicker.p1Select = Options;
+            RacketPicker.p2Select = Options;
             SceneManager.LoadScene("Main");
         }
     }
