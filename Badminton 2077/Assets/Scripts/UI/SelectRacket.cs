@@ -5,10 +5,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+//using TMPro;
 //using UnityEngine.UIElements;
 
 public class SelectRacket : MonoBehaviour
 {
+    /*TextMeshPro Power;
+    RacketText racketText;*/
+    //public GameObject Power;
     /*public bool Rocket1Chosen;
     public bool Power1Chosen;
     public bool ZigZag1Chosen;
@@ -18,21 +22,28 @@ public class SelectRacket : MonoBehaviour
     public bool ZigZag2Chosen;*/
 
     public Sprite[] racket = new Sprite[3];
+    String[] strings = { "Power", "Rocket", "Zigzag" };
     public GameObject shown;
     bool p1Ready;
     bool p2Ready;
 
     public int Options;
 
+    /*private void Awake()
+    {
+        Power = GetComponent<TextMeshPro>();
+    }*/
+
     // Start is called before the first frame update
     void Start()
     {
+        //racketText = FindObjectOfType<RacketText>();
         p1Ready = false;
         p2Ready = false;
         RacketPicker.p1Select = 0;
         RacketPicker.p2Select = 0;
 
-        Options = 0;
+        Options = 0;        
     }
 
     // Update is called once per frame
@@ -57,8 +68,24 @@ public class SelectRacket : MonoBehaviour
         {
             Options = 2;
         }
+
+        /*if (Options == 1)
+        {
+            racketText.SetRacketText($"Power");
+        }
+
+        if (Options == 2)
+        {
+            racketText.SetRacketText($"Zigzag");
+        }
+
+        if (Options == 0)
+        {
+            racketText.SetRacketText($"Rocket");
+        }*/
         shown.GetComponent<Image>().sprite = racket[Options];
-        if(Input.GetKeyDown(KeyCode.W))
+        //Power.GetComponent<TextMeshPro>().SetText(strings[Options]);
+        if (Input.GetKeyDown(KeyCode.W))
         {
             p1Ready = true;
         }

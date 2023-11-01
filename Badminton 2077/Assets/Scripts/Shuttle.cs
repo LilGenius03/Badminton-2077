@@ -33,7 +33,7 @@ public class Shuttle : MonoBehaviour
     public Text score1;
     public Text score2;
 
-    private void FixedUpdate()
+      private void FixedUpdate()
     {
         score1.text = p1Score.ToString();
         score2.text = p2Score.ToString();
@@ -76,6 +76,8 @@ public class Shuttle : MonoBehaviour
             ShuttleReset = true;
         }
 
+        
+
         EndGame();
     }
 
@@ -84,13 +86,13 @@ public class Shuttle : MonoBehaviour
         if (transform.position != dest[target])
         {
             //ShuttleHit.Play();
-            if(speed > 1)
+            if (speed > 1)
             {
                 speed -= decel;
             }
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dest[target], step);
-        }
+        }        
     }
 
     void Launch()
