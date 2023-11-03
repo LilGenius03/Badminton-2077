@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 //using UnityEngine.UIElements;
 
 public class SelectRacket : MonoBehaviour
@@ -19,9 +18,7 @@ public class SelectRacket : MonoBehaviour
     public bool ZigZag2Chosen;*/
 
     public Sprite[] racket = new Sprite[3];
-    public TextMeshProUGUI[] text = new TextMeshProUGUI[3];
     public GameObject shown;
-    public GameObject ShownText;
     bool p1Ready;
     bool p2Ready;
 
@@ -61,7 +58,6 @@ public class SelectRacket : MonoBehaviour
             Options = 2;
         }
         shown.GetComponent<Image>().sprite = racket[Options];
-        ShownText.GetComponent<TextMeshProUGUI>().text = text[Options].text;
         if(Input.GetKeyDown(KeyCode.W))
         {
             p1Ready = true;
