@@ -18,7 +18,7 @@ public class ActivateRocketText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RocketSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>().RocketSelect;
+        RocketSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>();
 
         if (RocketSelectText == true)
         {

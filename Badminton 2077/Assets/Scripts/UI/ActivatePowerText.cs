@@ -18,7 +18,7 @@ public class ActivatePowerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PowerSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>().PowerSelect;
+        PowerSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>();
 
         if (PowerSelectText == true)
         {

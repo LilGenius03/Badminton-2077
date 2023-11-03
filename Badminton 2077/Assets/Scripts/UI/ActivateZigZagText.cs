@@ -18,7 +18,7 @@ public class ActivateZigZagText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ZigZagSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>().ZigZagSelect;
+        ZigZagSelectText = GameObject.Find("Scripts").GetComponent<SelectRacket>();
 
         if (ZigZagSelectText == true)
         {

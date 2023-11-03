@@ -17,7 +17,7 @@ public class ActivatePower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PowerSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>().PowerSelect;
+        PowerSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>();
 
         if (PowerSelect == true)
         {
