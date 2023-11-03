@@ -89,7 +89,7 @@ public class Shuttle : MonoBehaviour
     {
         if (transform.position != dest[target])
         {
-            if(speed > 1)
+            if(speed > 1.5f)
             {
                 speed -= decel;
             }
