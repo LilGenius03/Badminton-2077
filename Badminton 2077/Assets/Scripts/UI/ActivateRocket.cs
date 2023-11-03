@@ -17,7 +17,7 @@ public class ActivateRocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RocketSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>().RocketSelect;
+        /*RocketSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>().RocketSelect;
 
         if (RocketSelect == true)
         {
@@ -27,6 +27,6 @@ public class ActivateRocket : MonoBehaviour
         if (RocketSelect == false)
         {
             rend.enabled = false;
-        }
+        }*/
     }
 }

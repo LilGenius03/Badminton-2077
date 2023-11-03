@@ -17,7 +17,7 @@ public class ActivateZigZag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ZigZagSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>().ZigZagSelect;
+        /*ZigZagSelect = GameObject.Find("Scripts").GetComponent<SelectRacket>().ZigZagSelect;
 
         if (ZigZagSelect == true)
         {
@@ -27,6 +27,6 @@ public class ActivateZigZag : MonoBehaviour
         if (ZigZagSelect == false)
         {
             rend.enabled = false;
-        }
+        }*/
     }
 }
