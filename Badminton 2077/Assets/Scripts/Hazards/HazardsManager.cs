@@ -17,8 +17,6 @@ public class HazardsManager : MonoBehaviour
     {
         timeleft -= Time.deltaTime;
 
-        
-
         if (timeleft < 0)
         {
             GameObject nearestHazard = GameObject.FindWithTag("Hazard");
@@ -38,8 +36,17 @@ public class HazardsManager : MonoBehaviour
 
             
         }
-             
+    }
 
-      
+    public void FullReset()
+    {
+        GameObject nearestHazard = GameObject.FindWithTag("Hazard");
+
+        if (nearestHazard != null)
+        {
+            Destroy(nearestHazard);
+        }
+        timeleft = 10f;
+        return;
     }
 }

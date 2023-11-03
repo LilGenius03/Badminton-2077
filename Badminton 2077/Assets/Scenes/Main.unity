@@ -6479,6 +6479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
+--- !u!1 &1723984367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1077172235594901954, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
+  m_PrefabInstance: {fileID: 1723984366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821319247
 GameObject:
   m_ObjectHideFlags: 0
@@ -12253,6 +12258,10 @@ PrefabInstance:
       propertyPath: ShuttleHit
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
+      propertyPath: hazardManag
+      value: 
+      objectReference: {fileID: 1723984367}
     - target: {fileID: 135510622205251690, guid: dd530420baa218c428404ca5551280e7, type: 3}
       propertyPath: ShuttleReset
       value: 1

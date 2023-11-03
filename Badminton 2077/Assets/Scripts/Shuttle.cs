@@ -12,7 +12,7 @@ public class Shuttle : MonoBehaviour
     public float speed;
     public float decel;
     public float rotationSpeed = 1f;
-    public float rotationTime = 2f;
+    public float rotationTime = 3f;
     public float timeleft;
     public float WaitTillLaunch = 1f;
     public bool ShuttleReset;
@@ -21,7 +21,8 @@ public class Shuttle : MonoBehaviour
     public bool change = false;
     public int upDown = 0;
     //public ParticleSystem ShuttleHit;
- 
+    public GameObject hazardManag;
+
     public int target = 0;
 
     public GameObject point;
@@ -35,6 +36,11 @@ public class Shuttle : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector2 direction = dest[target] - transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.back * angle);
+
         score1.text = p1Score.ToString();
         score2.text = p2Score.ToString();
 
@@ -61,7 +67,7 @@ public class Shuttle : MonoBehaviour
             point.SetActive(false);
             Move();
         }
-        if(transform.position == dest[target]||speed <= 0)
+        if(transform.position == dest[target])
         {
             if(target == 1||target == 7|| target >=9 && target <=13)
             {
@@ -83,7 +89,6 @@ public class Shuttle : MonoBehaviour
     {
         if (transform.position != dest[target])
         {
-            //ShuttleHit.Play();
             if(speed > 1)
             {
                 speed -= decel;
@@ -95,10 +100,11 @@ public class Shuttle : MonoBehaviour
 
     void Launch()
     {
+        hazardManag.GetComponent<HazardsManager>().FullReset();
         timeleft -= Time.deltaTime;
         transform.position = dest[0];
 
-        if (timeleft > 0.5)
+        if (timeleft > 1f)
         {
             if (wait <= 0)
             {
@@ -118,14 +124,6 @@ public class Shuttle : MonoBehaviour
             timeleft = rotationTime;
             ShuttleReset = false;
             speed = 10;
-            //ShuttleHit.Stop();
-
-            /*while(timeleft > 0)
-            {
-                gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
-            }*/
-
-            //yield return new WaitForSeconds(WaitTillLaunch);
 
         }
 
