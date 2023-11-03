@@ -6,14 +6,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
+
 //using UnityEngine.UIElements;
 
 public class SelectRacket : MonoBehaviour
 {
     public string[] rNames = { "Power", "Rocket", "Zigzag" };
     public Sprite[] racket = new Sprite[3];
-    public TextMeshProUGUI[] text = new TextMeshProUGUI[3];
+
     public GameObject shown;
     public GameObject ShownText;
     public TMP_Text rName;
@@ -57,7 +57,6 @@ public class SelectRacket : MonoBehaviour
             Options = 2;
         }
         shown.GetComponent<Image>().sprite = racket[Options];
-        ShownText.GetComponent<TextMeshProUGUI>().text = text[Options].text;
         if(Input.GetKeyDown(KeyCode.W))
         rName.text = rNames[Options];
         rNameShadow.text = rNames[Options];
