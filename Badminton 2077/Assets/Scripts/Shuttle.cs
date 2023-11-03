@@ -39,7 +39,7 @@ public class Shuttle : MonoBehaviour
         Vector2 direction = dest[target] - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(Vector3.back * angle);
+        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
         score1.text = p1Score.ToString();
         score2.text = p2Score.ToString();
