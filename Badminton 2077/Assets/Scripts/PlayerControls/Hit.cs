@@ -12,11 +12,9 @@ public class Hit : MonoBehaviour
     public AudioSource hit;
     public ParticleSystem PlayerHit;
     public int powerUp;
-    public int upDown;
 
     void Start()
     {
-        upDown = hand * -1;
         powerUp = RacketPicker.p1Select;
     }
 
@@ -31,10 +29,10 @@ public class Hit : MonoBehaviour
             col.GetComponent<Shuttle>().change = change;
             if(change)
             {
-                col.GetComponent<Shuttle>().upDown = upDown;
+                col.GetComponent<Shuttle>().upDown = hand;
             }
             power = 1;
-            speed = 15;
+            speed = 10;
             change = false;
         }
     }
@@ -47,10 +45,9 @@ public class Hit : MonoBehaviour
                 power = 2;
                 break;
             case 1:
-                speed = 20;
+                speed = 15;
                 break;
             case 2:
-                upDown = hand * -1;
                 change = true;
                 break;
             default:
@@ -69,10 +66,9 @@ public class Hit : MonoBehaviour
                 power = 3;
                 break;
             case 1:
-                speed = 25;
+                speed = 20;
                 break;
             case 2:
-                upDown = Random.Range(-1, 2);
                 change = true;
                 break;
             default:

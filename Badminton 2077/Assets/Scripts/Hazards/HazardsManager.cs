@@ -16,6 +16,9 @@ public class HazardsManager : MonoBehaviour
     void Update()
     {
         timeleft -= Time.deltaTime;
+
+        
+
         if (timeleft < 0)
         {
             GameObject nearestHazard = GameObject.FindWithTag("Hazard");
@@ -24,6 +27,7 @@ public class HazardsManager : MonoBehaviour
             {
                 Destroy(nearestHazard);
             }
+
             timeleft = ResetTime;
 
             int randomIndux = Random.Range(0, hazards.Length);
@@ -34,16 +38,8 @@ public class HazardsManager : MonoBehaviour
 
             
         }
-    }
-    public void FullReset()
-    {
-        GameObject nearestHazard = GameObject.FindWithTag("Hazard");
+             
 
-        if (nearestHazard != null)
-        {
-            Destroy(nearestHazard);
-        }
-        timeleft = 10f;
-        return;
+      
     }
 }
