@@ -46,7 +46,7 @@ public class HazardsManager : MonoBehaviour
         {
             Destroy(nearestHazard);
         }
-        timeleft = 10f;
+        timeleft = ResetTime;
         return;
     }
 }

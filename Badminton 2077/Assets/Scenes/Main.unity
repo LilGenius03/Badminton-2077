@@ -6395,7 +6395,11 @@ PrefabInstance:
       objectReference: {fileID: 1596010793}
     - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: timeleft
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
+      propertyPath: ResetTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4047132737230446902, guid: d983025672642ae4cb90b91a9dd53413, type: 3}
       propertyPath: PortalParent
