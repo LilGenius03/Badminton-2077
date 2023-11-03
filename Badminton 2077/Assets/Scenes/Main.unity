@@ -11941,7 +11941,10 @@ PrefabInstance:
       propertyPath: SuperMeterhalfWay
       value: 
       objectReference: {fileID: 2122327645}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4308390562429978089, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
+    - {fileID: 3237919901776912369, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
+    - {fileID: 4352164314896339850, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 62140a9ba29abdc4b910ba12081f70cc, type: 3}
 --- !u!114 &446331680388571186 stripped
 MonoBehaviour:
@@ -12194,7 +12197,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 399629570515488145, guid: f980c1bcccc6fd741acbea7f3c6bb471, type: 3}
+    - {fileID: 6636047772788697713, guid: f980c1bcccc6fd741acbea7f3c6bb471, type: 3}
+    - {fileID: 1936577170914144677, guid: f980c1bcccc6fd741acbea7f3c6bb471, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f980c1bcccc6fd741acbea7f3c6bb471, type: 3}
 --- !u!1 &5348103077937680272 stripped
 GameObject:
