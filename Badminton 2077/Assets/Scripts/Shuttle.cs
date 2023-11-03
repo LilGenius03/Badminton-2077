@@ -33,8 +33,14 @@ public class Shuttle : MonoBehaviour
     public Text score1;
     public Text score2;
 
+    public GameObject hazardManag;
+
     private void FixedUpdate()
     {
+        Vector2 direction = dest[target] - transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.back * angle);
         score1.text = p1Score.ToString();
         score2.text = p2Score.ToString();
 
@@ -61,7 +67,7 @@ public class Shuttle : MonoBehaviour
             point.SetActive(false);
             Move();
         }
-        if(transform.position == dest[target]||speed <= 0)
+        if(transform.position == dest[target])
         {
             if(target == 1||target == 7|| target >=9 && target <=13)
             {
@@ -95,10 +101,11 @@ public class Shuttle : MonoBehaviour
 
     void Launch()
     {
+        hazardManag.GetComponent<HazardsManager>().FullReset();
         timeleft -= Time.deltaTime;
         transform.position = dest[0];
 
-        if (timeleft > 0.5)
+        if (timeleft > 1f)
         {
             if (wait <= 0)
             {
@@ -108,7 +115,6 @@ public class Shuttle : MonoBehaviour
                 }
                 while (target == 7 || target == 8);
                 point.transform.position = dest[target];
-                gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
                 wait = 0.2f;
             }
             wait -= Time.deltaTime;
@@ -118,18 +124,7 @@ public class Shuttle : MonoBehaviour
             timeleft = rotationTime;
             ShuttleReset = false;
             speed = 10;
-            //ShuttleHit.Stop();
-
-            /*while(timeleft > 0)
-            {
-                gameObject.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed * 360);
-            }*/
-
-            //yield return new WaitForSeconds(WaitTillLaunch);
-
         }
-
-        
     }
 
     void EndGame()
